@@ -1,0 +1,23 @@
+@font-face {
+    font-family: logo-font;
+    src: url(./../../assets/fonts/logo-font.ttf);
+}
+
+footer {
+    text-align: center;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+
+    a {
+        color: #ABD9FF;
+        font-family: logo-font;
+    }
+    a:hover, a:focus {
+        color: #ABD9FF;
+        font-family: logo-font;
+        text-decoration: none;
+    }
+}
