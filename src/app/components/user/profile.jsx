@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import firebase from '../../utils/firebase';
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 
-import { fetchUser, updateUser } from '../../actions/firebase_actions'
+import { fetchUser, updateUser } from '../../modules/User'
 import Loading from '../helpers/loading'
 import ChangePassword from './change_password'
 import Dropzone from 'react-dropzone'
@@ -85,15 +85,7 @@ class UserProfile extends Component {
 
 }
 
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchUser, updateUser }, dispatch);
-}
-
-
-function mapStateToProps(state) {
-    return { currentUser: state.currentUser };
-}
-
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchUser, updateUser }, dispatch)
+const mapStateToProps = (state) => ({ currentUser: state.currentUser })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

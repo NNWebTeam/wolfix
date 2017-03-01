@@ -5,7 +5,7 @@ import './Header.scss'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { fetchUser, logoutUser } from '../../actions/firebase_actions'
+import { fetchUser, logoutUser } from '../../modules/User'
 
 class Header extends Component {
 	constructor(props) {
@@ -67,7 +67,6 @@ class Header extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchUser, logoutUser }, dispatch)
-
 const mapStateToProps = (state) => ({ currentUser: state.currentUser })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)

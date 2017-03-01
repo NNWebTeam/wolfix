@@ -3,6 +3,13 @@
     max-width: 100%;
     margin: 0 auto;
     font-size: 1.1em;
+    background-color: black;
+
+    video {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
 
     .background {
         position: fixed;

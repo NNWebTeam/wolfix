@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux'
-import FireBaseUserReducer from './firebase_user_reducer'
+import User from './User'
 import {reducer as formReducer} from 'redux-form'
-
+import Animation from './Animation'
 export default combineReducers({
-  currentUser: FireBaseUserReducer,
+  currentUser: User,
+  animation: Animation,
   form: formReducer
 })

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changePassword } from '../../actions/firebase_actions';
+import { changePassword } from '../../modules/User';
 import {Row, Col} from 'react-bootstrap'
 
 class ChangePassword extends Component {
-
   constructor(props) {
       super(props);
       this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -31,40 +30,32 @@ class ChangePassword extends Component {
       });
     }
   }
-
     render() {
       return (
-            <form id="ChangePassword" role="form" onSubmit={this.onFormSubmit}>
-              <h4> Zmiana hasła </h4>
-              <h5> {this.state.message} </h5>
-              <div className="form-group">
-                <label htmlFor="password"> Nowe hasło </label>
-                <input type="password" className="form-control"
-                  name="password" ref="password" id="password" 
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="repeatPassword"> Powtórz hasło: </label>
-                <input type="password" className="form-control"
-                  name="repeatPassword" ref="repeatPassword" id="repeatPassword" 
-                />
+        <form id="ChangePassword" role="form" onSubmit={this.onFormSubmit}>
+          <h4> Zmiana hasła </h4>
+          <h5> {this.state.message} </h5>
+          <div className="form-group">
+            <label htmlFor="password"> Nowe hasło </label>
+            <input type="password" className="form-control"
+              name="password" ref="password" id="password" 
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="repeatPassword"> Powtórz hasło: </label>
+            <input type="password" className="form-control"
+              name="repeatPassword" ref="repeatPassword" id="repeatPassword" 
+            />
 
-              </div>
-              <button type="submit" className="btn btn-primary">Zapisz</button>
-            </form>
-         
+          </div>
+          <button type="submit" className="btn btn-primary">Zapisz</button>
+        </form>
     );
   }
-
 }
 
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ changePassword }, dispatch);
-}
-
-function mapStateToProps(state) {
-    return { currentUser: state.currentUser };
-}
+const mapDispatchToProps = (dispatch) => bindActionCreators({ changePassword }, dispatch)
+const mapStateToProps = (state) => ({ currentUser: state.currentUser })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChangePassword);

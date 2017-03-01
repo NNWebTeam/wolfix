@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { browserHistory, Link } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { loginUser, fetchUser } from '../../actions/firebase_actions'
+import { loginUser, fetchUser } from '../../modules/User'
 import {Row, Col, Grid, Alert} from 'react-bootstrap'
 
 class UserLogin extends Component {
