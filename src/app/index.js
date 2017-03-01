@@ -18,9 +18,9 @@ const composeEnhancers =
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore)
 
-const provider = () =>
+const provider =
   <Provider store={createStoreWithMiddleware(reducers, composeEnhancers)}>
     <Router history={browserHistory} routes={routes} />
   </Provider>
 
-ReactDOM.render(provider(), document.querySelector('.react-root'))
+ReactDOM.render(provider, document.querySelector('.react-root'))

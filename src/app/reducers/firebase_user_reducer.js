@@ -9,7 +9,7 @@ import {
   LOGOUT_FIREBASE_USER,
 } from '../actions/firebase_actions'
 
-export default function (state = null, action) {
+export default (state = null, action) => {
     switch (action.type) {
     case FETCH_FIREBASE_USER:
         return action.payload;

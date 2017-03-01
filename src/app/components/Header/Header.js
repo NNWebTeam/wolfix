@@ -24,10 +24,13 @@ class Header extends Component {
         const {currentUser} = this.props
 		return (
 			<header>
-				<p className="logo">RIVERS</p>
+				
 				<Navbar>
 					<Navbar.Header>
 						<Navbar.Toggle />
+						<Navbar.Brand>
+							<p className="logo">Logo</p>
+						</Navbar.Brand>
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav>
@@ -35,18 +38,11 @@ class Header extends Component {
 								<Link to='/' activeClassName='is-active' onlyActiveOnIndex>Strona Glówna</Link>
 							</li>
 							<li>
-								<Link to='/band' activeClassName='is-active'>Zespól</Link>
+								<Link to='#' activeClassName='is-active'>Zakładka</Link>
 							</li>
 							<li>
-								<Link to='/music' activeClassName='is-active'>Muzyka</Link>
+								<Link to='/login' activeClassName='is-active'>Zaloguj</Link>
 							</li>
-							<li>	
-								<Link to='/events' activeClassName='is-active'>Terminy</Link>
-							</li>
-							<li>
-								<Link to='/contact' activeClassName='is-active'>Kontakt</Link>
-							</li>
-							
 						</Nav>
 						<Nav pullRight>
 							{currentUser && currentUser.uid &&
@@ -69,14 +65,9 @@ class Header extends Component {
 		)
 	}
 }
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchUser, logoutUser }, dispatch)
-}
 
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchUser, logoutUser }, dispatch)
 
-function mapStateToProps(state) {
-    return { currentUser: state.currentUser }
-}
-
+const mapStateToProps = (state) => ({ currentUser: state.currentUser })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)

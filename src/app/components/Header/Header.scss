@@ -1,46 +1,4 @@
-@font-face {
-    font-family: nav-font;
-    src: url(./../../assets/fonts/nav-font.ttf);
-}
 
-@font-face {
-    font-family: logo-font;
-    src: url(./../../assets/fonts/logo-font.ttf);
-}
 header {
-	margin-left: 0px;
-	margin-right: 0px;
-
-	.logo {
-		color: #ABD9FF;
-		font-family: logo-font;
-		font-size: 18vw;
-		text-align: center;
-		text-shadow: 3px 2px black;
-		margin-bottom: -20px;
-	}
 	
-	.navbar-default {
-		background-color: rgba(0, 0, 0, 0.6);
-		background-image: none;
-		border-color: transparent;
-		-moz-box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-		-webkit-box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-		box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-		-webkit-border: 15px;
-
-		.navbar-nav  {
-			li > a {
-				color: #ABD9FF;
-				font-size: 24px;
-				font-family: nav-font;
-				padding: 20px;
-			}
-
-			.dropdown-menu {
-				background-color: rgba(0, 0, 0, 0.6);
-				background-image: none;
-			}
-		}
-	}
 }

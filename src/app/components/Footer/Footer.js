@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 
 const Footer = () =>
     <footer>
-        <Grid><Link to='/login'>RIVERS {new Date().getFullYear()}</Link></Grid>
+        <Grid><Link to='/login'>Footer {new Date().getFullYear()}</Link></Grid>
     </footer>
 
 export default Footer

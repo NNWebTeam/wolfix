@@ -10,17 +10,16 @@ class Home extends Component {
 	  }
   }
   render() {
-	const {animation} = this.state
-	return (
-	  animation ?
-      <div onClick={() => {this.setState({animation: false})}}>
-		Animacja
-	  </div>
-	  :
-	  <div>
-	  	Costam
-	  </div>
-	)
+		const {animation} = this.state
+		return (
+			animation
+			? <div onClick={() => {this.setState({animation: false})}}>
+					Animacja - KLIKNIJ MNIE
+				</div>
+			: <div>
+					Costam
+				</div>
+		)
   }
 }
 
