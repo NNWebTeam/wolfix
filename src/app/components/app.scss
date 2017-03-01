@@ -1,6 +1,5 @@
 @import 'frames';
 @import 'animationDelay';
-
 .app {
     height: 100vh;
     max-width: 100%;
@@ -46,12 +45,21 @@
     }
     .homeHexes {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         text-align: center;
         overflow: hidden;
         display: flex;
         justify-content: center;
-        .test {
+        background-color: black;
+        &-logo {
+            position: absolute;
+            left: 47%;
+            top: 30px;
+            img {
+                height: 50px;
+            }
+        }
+        &-content {
             height: 100%;
             display: inline-flex;
             align-items: center;
@@ -89,6 +97,7 @@
                     transition: .2s ease-in-out;
                     fill: rgba(75, 75, 75, 0.1);
                     stroke: #4b4b4b;
+                    z-index: 2;
                     &:hover {
                         fill: rgba(146, 4, 20, 0.6);
                     }
@@ -96,13 +105,58 @@
                 .hovers {
                     position: absolute;
                 }
-
-                .news{
+                .news {
                     position: absolute;
                 }
-
-                .print{
+                .print {
                     position: absolute;
+                }
+                a {
+                    &::after {
+                        position: absolute;
+                        top: 95px;
+                        width: 170px;
+                        text-align: center;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: white;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        font-size: 15px;
+                    }
+                    &:hover {
+                        polyline {
+                            fill: rgba(146, 4, 20, 0.6);
+                        }
+                    }
+                }
+                .wolf-news::after {
+                    content: 'Wolf news';
+                    left: 0;
+                }
+                .druk::after {
+                    content: 'Druk 3D';
+                    right: 9px;
+                }
+                .portfolio::after {
+                    content: 'Portfolio';
+                    left: 0;
+                }
+                .o-nas::after {
+                    content: 'O nas';
+                    left: 33%;
+                }
+                .projekty::after {
+                    content: 'Projekty';
+                    right: 9px;
+                }
+                .wolfshop::after {
+                    content: 'Wolfshop';
+                    left: 0;
+                }
+                .partnerzy::after {
+                    content: 'Partnerzy';
+                    right: 9px;
                 }
             }
             .col-right {

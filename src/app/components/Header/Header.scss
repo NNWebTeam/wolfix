@@ -10,10 +10,15 @@ header {
         height: 90px;
         .navbar-nav {
             li {
+                    line-height: 90px;
                 a {
                     color: white;
-                    line-height: 90px;
                     padding: 0 15px;
+                    margin: 35px 0;
+                    text-shadow: none;
+                    &:hover {
+                        color: #757575;
+                    }
                 }
             }
         }

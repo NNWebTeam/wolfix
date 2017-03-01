@@ -4,17 +4,18 @@ import {Grid, Row, Col, Image} from 'react-bootstrap'
 import {Link} from 'react-router'
 import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'react-shapes';
 
-class Home extends Component {
-  render() {
-		return (
+const Home = () =>
 				<div className="homeHexes">
-          <div className="test">
+          <div className="homeHexes-content">
+					<div className="homeHexes-logo wolf">
+						<img src="http://wolfix.pl/wp-content/themes/wolfix/img/logo.png" alt=""/>
+					</div>
             <div className="col-left">
               <div className="hex-col">
                 <div className="hex"/>
                 <div className="hex">
                   <Polyline className="hexAnimation3" points={hex.points} stroke={{color:'#4b4b4b'}} strokeWidth={hex.strokeWidth}/>
-                  <Polyline className="hexAnimation6" points={hex.points} stroke={{color:'#4b4b4b'}} strokeWidth={hex.strokeWidth}/>
+									<Polyline className="hexAnimation6" points={hex.points} stroke={{color:'#4b4b4b'}} strokeWidth={hex.strokeWidth}/>
                 </div>
                 <div className="hex">
                   <Polyline className="hexAnimation1" points={hex.points} stroke={{color:'#4b4b4b'}} strokeWidth={hex.strokeWidth}/>
@@ -27,17 +28,27 @@ class Home extends Component {
               <div className="hex-col">
                 <div className="hex">
                   <div className="hovers">
-                    <Polyline className="hexAnimation10" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
-                    <Polyline className="hexAnimation9" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										<Link className="hexAnimation10 wolf-news" to='/wolf-news'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
+                    <Link className="druk hexAnimation9" to='/o-nas'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
                   </div>
                   <Polyline className="hexAnimation10" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
                   <Polyline className="hexAnimation9" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
                 </div>
                 <div className="hex" style={{marginLeft: '-91px'}}>
                   <div className="hovers">
-                    <Polyline className="hexAnimation11" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
-                    <Polyline className="hexAnimation15" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
-                    <Polyline className="hexAnimation14" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+                    <Link className="hexAnimation11 portfolio" to='/portfolio'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
+                    <Link className="hexAnimation15 o-nas" to='/o-nas'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
+                    <Link className="hexAnimation14 projekty" to='/o-nas'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
                   </div>
                   <Polyline className="hexAnimation11" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
                   <Polyline className="hexAnimation15" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
@@ -45,8 +56,12 @@ class Home extends Component {
                 </div>
                 <div className="hex">
                   <div className="hovers">
-                    <Polyline className="hexAnimation12" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
-                    <Polyline className="hexAnimation13" points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+                    <Link className="hexAnimation12 wolfshop" to='/wolfshop'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
+										<Link className="hexAnimation13 partnerzy" to='/partnerzy'>
+											<Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
+										</Link>
                   </div>
                   <Polyline className="hexAnimation12" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
                   <Polyline className="hexAnimation13" points={hex.pointsCenter} fill={{color:'#4b4b4b'}} strokeWidth={0}/>
@@ -66,9 +81,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-		)
-  }
-}
 
 const hex = {
   pointsCenter: '300 0,40 160,40 460,300 620,560 460, 560 160, 300 0, 300 620, 40 460, 300 300, 300 0, 560 160, 300 300',
