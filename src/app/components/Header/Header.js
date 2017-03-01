@@ -29,22 +29,40 @@ class Header extends Component {
 					<Navbar.Header>
 						<Navbar.Toggle />
 						<Navbar.Brand>
-							<p className="logo">Logo</p>
+							<img src="http://wolfix.pl/wp-content/themes/wolfix/img/logo.png" alt=""/>
 						</Navbar.Brand>
 					</Navbar.Header>
 					<Navbar.Collapse>
-						<Nav>
+						<Nav pullRight>
 							<li>
-								<Link to='/' activeClassName='is-active' onlyActiveOnIndex>Strona Glówna</Link>
+								<Link className="link" to='/' className="link" activeClassName='is-active' onlyActiveOnIndex>Home</Link>
 							</li>
 							<li>
-								<Link to='#' activeClassName='is-active'>Zakładka</Link>
+								<Link to='/wolf-news' activeClassName='is-active'>Wolf news</Link>
 							</li>
 							<li>
-								<Link to='/login' activeClassName='is-active'>Zaloguj</Link>
+								<Link to='/login' activeClassName='is-active'>Wolf shop</Link>
+							</li>
+							<li>
+								<Link to='/o-nas' activeClassName='is-active'>O nas</Link>
+							</li>
+							<li>
+								<Link to='/portfolio' activeClassName='is-active'>Portfolio</Link>
+							</li>
+							<li>
+								<Link to='/login' activeClassName='is-active'>Project studio</Link>
+							</li>
+							<li>
+								<Link to='/login' activeClassName='is-active'>Projekty</Link>
+							</li>
+							<li>
+								<Link to='/login' activeClassName='is-active'>Partnerzy</Link>
+							</li>
+							<li>
+								<Link to='/login' activeClassName='is-active'>Kontakt</Link>
 							</li>
 						</Nav>
-						<Nav pullRight>
+						<Nav>
 							{currentUser && currentUser.uid &&
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"

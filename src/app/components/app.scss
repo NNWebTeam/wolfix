@@ -1,17 +1,18 @@
+@import 'frames';
+@import 'animationDelay';
+
 .app {
-    min-height: 100%;
+    height: 100vh;
     max-width: 100%;
-    margin: 0 auto;
     font-size: 1.1em;
     background-color: black;
     color: white;
-
+    text-align: center;
     video {
-        width: 100vw;
-        display: flex;
-        align-items: center;
+        width: 90%;
+        animation-name: fadeOut;
+        animation-duration: 11s;
     }
-
     .background {
         position: fixed;
         z-index: -1000;
@@ -19,14 +20,98 @@
         height: 100%;
         background-size: 100% 100%;
     }
-
+    header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    footer {
+        height: 130px;
+        padding: 15px;
+    }
     .content {
-        background-color: rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-        -webkit-box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-        box-shadow: rgba(13, 13, 13, 0.5) 0px 0px 15px;
-        -webkit-border: 15px;
-        padding: 20px 20px;
-        border-radius: 4px;
+        min-height: 100vh;
+        margin-bottom: -130px;
+        background-color: #d1d1d1;
+        color: black;
+        padding-top: 90px;
+        padding-bottom: 130px;
+        text-align: left;
+    }
+    .page {
+        animation-name: fadeIn;
+        animation-duration: .3s;
+    }
+    .homeHexes {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        .test {
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 97px;
+            .hex {
+                height: 235px;
+                &:nth-child(even) {
+                    margin-left: 91px;
+                    margin-bottom: -74px;
+                    margin-top: -74px;
+                }
+                polyline {
+                    transform: scale(.35);
+                    &::after {
+                        background-color: red;
+                    }
+                }
+                svg {
+                    height: 230px;
+                    width: 200px;
+                    margin-left: -18px;
+                }
+            }
+            .col-left {
+                width: 566px;
+                .hex-col {
+                    padding-left: 20px;
+                    text-align: left;
+                }
+            }
+            .col-center {
+                text-align: left;
+                width: 455px;
+                polyline {
+                    transition: .2s ease-in-out;
+                    fill: rgba(75, 75, 75, 0.1);
+                    stroke: #4b4b4b;
+                    &:hover {
+                        fill: rgba(146, 4, 20, 0.6);
+                    }
+                }
+                .hovers {
+                    position: absolute;
+                }
+
+                .news{
+                    position: absolute;
+                }
+
+                .print{
+                    position: absolute;
+                }
+            }
+            .col-right {
+                width: 566px;
+                .hex-col {
+                    padding-left: 20px;
+                    text-align: left;
+                }
+            }
+        }
     }
 }

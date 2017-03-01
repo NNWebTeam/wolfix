@@ -1,4 +1,27 @@
-
 header {
-    
+    .navbar {
+        border-radius: 0;
+        .container {
+            height: 90px;
+        }
+        background: none;
+        background-color: #191919;
+        border: none;
+        height: 90px;
+        .navbar-nav {
+            li {
+                a {
+                    color: white;
+                    line-height: 90px;
+                    padding: 0 15px;
+                }
+            }
+        }
+        .navbar-header {
+            height: 90px;
+            .navbar-brand {
+                height: 100%;
+            }
+        }
+    }
 }
