@@ -1,0 +1,35 @@
+.wolf-news{
+    .link{
+        background: url(http://serwer1775738.home.pl/autoinstalator/wordpress2/wp-content/themes/wolfix/img/divider2.png);
+        width: 163px;
+        height: 42px;
+        text-align: center;
+        margin-top: 20px;
+        opacity: .7;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    a{
+        color: white;
+        line-height: 42px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .row{
+        border-bottom: 1px solid #d1d1d1;
+        padding: 10px 0;
+
+        &:nth-last-child(2){
+            border-bottom: 0;
+        }
+
+        &:nth-last-child(1){
+            border-bottom: 0;
+        }
+    }
+}

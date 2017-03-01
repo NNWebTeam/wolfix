@@ -1,23 +1,24 @@
 import React from 'react'
 import {Route, IndexRoute} from 'react-router'
-import App from './components/app'
+import App from './App'
+import Home from './Home'
 
-import HomeIndex from './components/index_home'
-import UserLogin from './components/user/login'
-import UserLogout from './components/user/logout'
-import UserRegister from './components/user/register'
-import UserProfile from './components/user/profile'
-import ResetPassword from './components/user/reset_password'
-import requireAuth from './utils/authenticated'
+// firebase
+import UserLogin from '../components/user/login'
+import UserLogout from '../components/user/logout'
+import UserRegister from '../components/user/register'
+import UserProfile from '../components/user/profile'
+import ResetPassword from '../components/user/reset_password'
+import requireAuth from '../utils/authenticated'
 
-import WolfNews from './components/WolfNews/WolfNews'
-import Druk3D from './components/Druk3D/Druk3D'
-import Portfolio from './components/Portfolio/Portfolio'
-import Onas from './components/Onas/Onas'
+import WolfNews from './WolfNews'
+import Druk3D from './Druk3D'
+import Portfolio from './Portfolio'
+import Onas from './Onas'
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={HomeIndex} />
+    <IndexRoute component={Home} />
     <Route path="/login" component={UserLogin} />
     <Route path="/logout" component={UserLogin} onEnter={requireAuth} />
     <Route path="/register" component={UserRegister} />

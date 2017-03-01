@@ -2,14 +2,14 @@ import React, {Component} from 'react'
 import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 
-class Onas extends Component {
+class Druk3D extends Component {
   render() {
-	return (
-	  <div>
-	  	<h1>Onas</h1>
-	  </div>
-	)
+		return (
+			<div>
+				<h1>Druk 3D</h1>
+			</div>
+		)
   }
 }
 
-export default Onas
+export default Druk3D

@@ -3,7 +3,8 @@ import {Grid, Row, Col, Image} from 'react-bootstrap'
 import './Footer.scss'
 import {Link} from 'react-router'
 
-const Footer = () => <footer>
+const Footer = () =>
+<footer>
     <div>
         {/*<img src="http://wolfix.pl/wp-content/themes/wolfix/img/logo.png" alt=""/>*/}
         <Grid>
