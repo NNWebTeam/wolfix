@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav, Image} from 'react-bootstrap'
 import './Header.scss'
 import { Link } from 'react-router'
+import logo from './../../assets/logo.png'
 
 class Header extends Component {
 	constructor(props) {
@@ -25,7 +26,7 @@ class Header extends Component {
 					<Navbar.Header>
 						<Navbar.Toggle />
 						<Navbar.Brand>
-							<img src="http://wolfix.pl/wp-content/themes/wolfix/img/logo.png" alt=""/>
+							<Image src={logo}/>
 						</Navbar.Brand>
 					</Navbar.Header>
 					<Navbar.Collapse>
@@ -37,7 +38,7 @@ class Header extends Component {
 								<Link to='/wolf-news' activeClassName='is-active'>Wolf news</Link>
 							</li>
 							<li>
-								<Link to='/wolf-shop' activeClassName='is-active'>Wolf shop</Link>
+								<Link to="https://www.google.com/" target="_blank">Wolf shop</Link>
 							</li>
 							<li>
 								<Link to='/o-nas' activeClassName='is-active'>O nas</Link>
