@@ -11,8 +11,10 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
             <source src="http://wolfix.pl/wp-content/uploads/2016/10/Animacja-Render-05-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </source>
-            <Link to="/" onClick={() => turnOffAnimation()}>Czytaj więcej</Link>
           </video>
+          <div className="pomin">
+            <Link className="link" to="/" onClick={() => turnOffAnimation()}>Pomiń intro</Link>
+          </div>
         </div>
       : hexes
         ? children

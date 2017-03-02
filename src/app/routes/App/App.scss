@@ -1,36 +1,57 @@
 @import 'frames';
 @import 'animationDelay';
 .app {
+    font-family: Titillium Web;
     height: 100vh;
     max-width: 100%;
     font-size: 1.1em;
     background-color: black;
     color: white;
     text-align: center;
-    
+    h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #191919;
+    }
     .animation {
         video {
-            width: 90%;
+            width: 80%;
             animation-name: fadeOut;
             animation-duration: 11s;
             z-index: 0;
         }
-        .link {
-            background: url(http://serwer1775738.home.pl/autoinstalator/wordpress2/wp-content/themes/wolfix/img/divider2.png);
-            width: 163px;
+        .pomin {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
             height: 42px;
-            text-align: center;
-            margin-top: 20px;
-            opacity: .7;
-            transition: .3s ease-in-out;
-            cursor: pointer;
-            z-index: -1;
-            &:hover{
-                opacity: 1;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            .link {
+            animation-name: fadeIn;
+            animation-duration: 3s;
+                background: url('./assets/button.png');
+                width: 163px;
+                height: 42px;
+                transition: .3s ease-in-out;
+                cursor: pointer;
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                opacity: .7;
+                &:hover {
+                    opacity: 1;
+                    text-decoration: none;
+                }
             }
         }
     }
-    
     .background {
         position: fixed;
         z-index: -1000;
@@ -71,124 +92,124 @@
         justify-content: center;
         background-color: black;
         &-logo {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                width: 359px;
-                margin-top: -5vh;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 359px;
+            margin-top: -5vh;
             img {
                 height: 50px;
             }
         }
         &-content {
-            .hex-row{
+            .hex-row {
                 height: 100%;
-            display: inline-flex;
-            align-items: center;
-            margin-left: 97px;
-            .hex {
-                height: 235px;
-                &:nth-child(even) {
-                    margin-left: 91px;
-                    margin-bottom: -74px;
-                    margin-top: -74px;
-                }
-                polyline {
-                    transform: scale(.35);
-                    &::after {
-                        background-color: red;
+                display: inline-flex;
+                align-items: center;
+                margin-left: 97px;
+                .hex {
+                    height: 235px;
+                    &:nth-child(even) {
+                        margin-left: 91px;
+                        margin-bottom: -74px;
+                        margin-top: -74px;
+                    }
+                    polyline {
+                        transform: scale(.35);
+                        &::after {
+                            background-color: red;
+                        }
+                    }
+                    svg {
+                        height: 230px;
+                        width: 200px;
+                        margin-left: -18px;
                     }
                 }
-                svg {
-                    height: 230px;
-                    width: 200px;
-                    margin-left: -18px;
+                .col-left {
+                    width: 566px;
+                    .hex-col {
+                        padding-left: 20px;
+                        text-align: left;
+                    }
                 }
-            }
-            .col-left {
-                width: 566px;
-                .hex-col {
-                    padding-left: 20px;
+                .col-center {
                     text-align: left;
-                }
-            }
-            .col-center {
-                text-align: left;
-                width: 455px;
-                polyline {
-                    transition: .2s ease-in-out;
-                    fill: rgba(75, 75, 75, 0.1);
-                    stroke: #4b4b4b;
-                    z-index: 2;
-                    &:hover {
-                        fill: rgba(146, 4, 20, 0.6);
-                    }
-                }
-                .hovers {
-                    position: absolute;
-                }
-                .news {
-                    position: absolute;
-                }
-                .print {
-                    position: absolute;
-                }
-                a {
-                    &::after {
-                        position: absolute;
-                        top: 95px;
-                        width: 170px;
-                        text-align: center;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        color: white;
-                        font-weight: bold;
-                        letter-spacing: 1px;
-                        font-size: 15px;
-                    }
-                    &:hover {
-                        polyline {
+                    width: 455px;
+                    polyline {
+                        transition: .2s ease-in-out;
+                        fill: rgba(75, 75, 75, 0.1);
+                        stroke: #4b4b4b;
+                        z-index: 2;
+                        &:hover {
                             fill: rgba(146, 4, 20, 0.6);
                         }
                     }
+                    .hovers {
+                        position: absolute;
+                    }
+                    .news {
+                        position: absolute;
+                    }
+                    .print {
+                        position: absolute;
+                    }
+                    a {
+                        &::after {
+                            position: absolute;
+                            top: 95px;
+                            width: 170px;
+                            text-align: center;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: white;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            font-size: 15px;
+                        }
+                        &:hover {
+                            polyline {
+                                fill: rgba(146, 4, 20, 0.6);
+                            }
+                        }
+                    }
+                    .wolf-news::after {
+                        content: 'Wolf news';
+                        left: 0;
+                    }
+                    .druk::after {
+                        content: 'Druk 3D';
+                        right: 9px;
+                    }
+                    .portfolio::after {
+                        content: 'Portfolio';
+                        left: 0;
+                    }
+                    .o-nas::after {
+                        content: 'O nas';
+                        left: 33%;
+                    }
+                    .projekty::after {
+                        content: 'Projekty';
+                        right: 9px;
+                    }
+                    .wolfshop::after {
+                        content: 'Wolfshop';
+                        left: 0;
+                    }
+                    .partnerzy::after {
+                        content: 'Partnerzy';
+                        right: 9px;
+                    }
                 }
-                .wolf-news::after {
-                    content: 'Wolf news';
-                    left: 0;
-                }
-                .druk::after {
-                    content: 'Druk 3D';
-                    right: 9px;
-                }
-                .portfolio::after {
-                    content: 'Portfolio';
-                    left: 0;
-                }
-                .o-nas::after {
-                    content: 'O nas';
-                    left: 33%;
-                }
-                .projekty::after {
-                    content: 'Projekty';
-                    right: 9px;
-                }
-                .wolfshop::after {
-                    content: 'Wolfshop';
-                    left: 0;
-                }
-                .partnerzy::after {
-                    content: 'Partnerzy';
-                    right: 9px;
-                }
-            }
-            .col-right {
-                width: 566px;
-                .hex-col {
-                    padding-left: 20px;
-                    text-align: left;
+                .col-right {
+                    width: 566px;
+                    .hex-col {
+                        padding-left: 20px;
+                        text-align: left;
+                    }
                 }
             }
         }
-    }
     }
 }
