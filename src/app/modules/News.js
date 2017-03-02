@@ -17,10 +17,13 @@ export const fetchNews = () => ({
   payload: FireBaseTools.getDatabaseReference('/news').once('value').then(e => e.val())
 })
 
-export const addNews = news => ({
+export const addNews = news => {
+  console.log(news)
+  return {
   type: ADD_NEWS,
-  payload: FireBaseTools.getDatabaseReference(`/news/${news.id}`).set(news)
-})
+  payload: FireBaseTools.getDatabaseReference(`/news/`).set(news)
+  }
+}
 
 // ------------------------------------
 // Reducer
@@ -31,6 +34,5 @@ export const initialState = {
 }
 
 export default createReducer(initialState, {
-  [FETCH_NEWS]: (state, {news}) => ({news}),
-  [ADD_NEWS]: (state, {news}) => ({...news.add(news)})
+  [FETCH_NEWS]: (state, {news}) => ({news})
 })
