@@ -1,15 +1,19 @@
 import React, {Component} from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
+import {Link} from 'react-router'
 
-const App = ({turnOffAnimation, animation, children, hexes}) =>
+const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
   <div className="app">
-    {animation
-      ? <video preload='auto' autoPlay onClick={() => turnOffAnimation()} onEnded={() => turnOffAnimation()}>
-          <source src="http://wolfix.pl/wp-content/uploads/2016/10/Animacja-Render-05-1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </source>
-        </video>
+    {initAnimation
+      ? <div className='animation'>
+          <video preload='auto' autoPlay onClick={() => turnOffAnimation()} onEnded={() => turnOffAnimation()}>
+            <source src="http://wolfix.pl/wp-content/uploads/2016/10/Animacja-Render-05-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </source>
+            <Link to="/" onClick={() => turnOffAnimation()}>Czytaj więcej</Link>
+          </video>
+        </div>
       : hexes
         ? children
         : <section className="page">

@@ -7,11 +7,30 @@
     background-color: black;
     color: white;
     text-align: center;
-    video {
-        width: 90%;
-        animation-name: fadeOut;
-        animation-duration: 11s;
+    
+    .animation {
+        video {
+            width: 90%;
+            animation-name: fadeOut;
+            animation-duration: 11s;
+            z-index: 0;
+        }
+        .link {
+            background: url(http://serwer1775738.home.pl/autoinstalator/wordpress2/wp-content/themes/wolfix/img/divider2.png);
+            width: 163px;
+            height: 42px;
+            text-align: center;
+            margin-top: 20px;
+            opacity: .7;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            z-index: -1;
+            &:hover{
+                opacity: 1;
+            }
+        }
     }
+    
     .background {
         position: fixed;
         z-index: -1000;

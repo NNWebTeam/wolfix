@@ -6,10 +6,10 @@ const mapActionCreators = ({
     turnOffAnimation
 })
 const mapStateToProps = ({
-    animation: {animation},
+    animation: {initAnimation},
     hexes: {hexes}
 }) => ({ 
-    animation,
+    initAnimation,
     hexes
 })
 

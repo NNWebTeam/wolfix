@@ -1,12 +1,16 @@
 import {combineReducers} from 'redux'
-import User from './User'
 import {reducer as form} from 'redux-form'
-import Animation from './Animation'
-import Hexes from './Hexes'
+import {reducer as modal} from 'redux-modal'
+import user from './User'
+import animation from './Animation'
+import hexes from './Hexes'
+import news from './News'
 
 export default combineReducers({
-  currentUser: User,
-  animation: Animation,
   form,
-  hexes: Hexes
+  modal,
+  user,
+  animation,
+  hexes,
+  news
 })
