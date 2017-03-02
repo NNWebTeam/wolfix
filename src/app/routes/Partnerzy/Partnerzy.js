@@ -15,12 +15,8 @@ const Partnerzy = ({
 }) =>
 	<div className="partnerzy">
 		<div className="main-hex">
-			<div className="hex1">
-				<div className="hex2">
-					<div className="hex3">
-						{text}
-					</div>
-				</div>
+			<div className="hex">
+				{text}
 			</div>
 		</div>
 		<div className="partners-hexes">

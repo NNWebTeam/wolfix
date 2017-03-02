@@ -1,29 +1,44 @@
-$hex-width: 100vh * 0.16;
-$partner-hex-width: $hex-width*.5;
-.content>.container {
+$hex-width: 100vh * 0.33;
+$partner-hex-width: $hex-width*.3;
+.content{
+    background-color: black !important;
+>.container {
     margin: 0;
     padding: 0;
     width: 100%;
 }
+}
 
 .partnerzy {
-    margin-top: 20px;
+    background-color: black;
+    margin-top: 0px;
     .main-hex,
     .partners-hexes {
         height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        .hex1,
-        .hex2,
-        .hex3 {
-            width: $hex-width;
-            height: $hex-width * 1.726;
-            background-color: red;
+        z-index:2;
+        .hex1{
+            width: $hex-width*.33;
+            height: $hex-width*.33;
+            padding: 55px 0;
         }
         .hex2,
         .hex3 {
             transform: rotate(60deg);
+            display: none;
+        }
+        
+        .hex{background-image: url(./../../assets/hex.png);
+            background-size: 100%;
+            background-color: white;
+            z-index: 100;
+            width: $hex-width;
+            height: $hex-width;
+            padding: 8vh 3vh;
+            text-align: center;
+            z-index: 1;
         }
     }
     .partners-hex {
@@ -107,31 +122,31 @@ $partner-hex-width: $hex-width*.5;
 }
 
 @keyframes orbit1 {
-	from { 	transform: rotate(0deg) translateY($hex-width*1.9) rotate(0deg); }
-	to   {  transform: rotate(360deg) translateY($hex-width*1.9) rotate(-360deg); }
+	from { 	transform: rotate(0deg) translateY($hex-width) rotate(0deg); }
+	to   {  transform: rotate(360deg) translateY($hex-width) rotate(-360deg); }
 }
 
 @keyframes orbit2 {
-	from { 	transform: rotate(60deg) translateY($hex-width*1.9) rotate(60deg); }
-	to   {  transform: rotate(420deg) translateY($hex-width*1.9) rotate(-300deg); }
+	from { 	transform: rotate(60deg) translateY($hex-width) rotate(60deg); }
+	to   {  transform: rotate(420deg) translateY($hex-width) rotate(-300deg); }
 }
 
 @keyframes orbit3 {
-	from { 	transform: rotate(120deg) translateY($hex-width*1.9) rotate(120deg); }
-	to   {  transform: rotate(480deg) translateY($hex-width*1.9) rotate(-240deg); }
+	from { 	transform: rotate(120deg) translateY($hex-width) rotate(120deg); }
+	to   {  transform: rotate(480deg) translateY($hex-width) rotate(-240deg); }
 }
 
 @keyframes orbit4 {
-	from { 	transform: rotate(180deg) translateY($hex-width*1.9) rotate(180deg); }
-	to   {  transform: rotate(540deg) translateY($hex-width*1.9) rotate(-180deg); }
+	from { 	transform: rotate(180deg) translateY($hex-width) rotate(180deg); }
+	to   {  transform: rotate(540deg) translateY($hex-width) rotate(-180deg); }
 }
 
 @keyframes orbit5 {
-	from { 	transform: rotate(240deg) translateY($hex-width*1.9) rotate(240deg); }
-	to   {  transform: rotate(600deg) translateY($hex-width*1.9) rotate(-120deg); }
+	from { 	transform: rotate(240deg) translateY($hex-width) rotate(240deg); }
+	to   {  transform: rotate(600deg) translateY($hex-width) rotate(-120deg); }
 }
 
 @keyframes orbit6 {
-	from { 	transform: rotate(300deg) translateY($hex-width*1.9) rotate(300deg); }
-	to   {  transform: rotate(660deg) translateY($hex-width*1.9) rotate(-60deg); }
+	from { 	transform: rotate(300deg) translateY($hex-width) rotate(300deg); }
+	to   {  transform: rotate(660deg) translateY($hex-width) rotate(-60deg); }
 }
