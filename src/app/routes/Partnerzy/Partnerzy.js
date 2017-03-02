@@ -3,33 +3,28 @@ import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 import './Partnerzy.scss'
 
-class Partnerzy extends Component {
-  render() {
-		return (
-			<div className="partnerzy">
-				<div className="main-hex">
-					<div className="hex1">
-						<div className="hex2">
-							<div className="hex3">
-							</div>
-						</div>
+const Partnerzy = ({firstPartner, text, insertHexToMainHex}) =>
+	<div className="partnerzy">
+		<div className="main-hex">
+			<div className="hex1">
+				<div className="hex2">
+					<div className="hex3">
+						{text}
 					</div>
 				</div>
-				<div className="partners-hexes">
-					<div className="partners-hex">
-						<div className="partner-hex1">
-							<div className="partner-hex2">
-								<div className="partner-hex3">
-									asdfasdfasdf
-								</div>
-							</div>
+			</div>
+		</div>
+		<div className="partners-hexes" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex">
+				<div className="partner-hex1">
+					<div className="partner-hex2">
+						<div className="partner-hex3">
+							{firstPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-		)
-  }
-}
-
+		</div>
+	</div>
 
 export default Partnerzy
