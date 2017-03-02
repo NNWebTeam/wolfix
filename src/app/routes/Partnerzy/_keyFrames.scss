@@ -1,0 +1,109 @@
+@import 'values';
+
+@keyframes orbit1 {
+    from {
+        transform: rotate(0*$deg) translateY($hex-width) rotate(0*$deg);
+    }
+    to {
+        transform: rotate(360+0*$deg) translateY($hex-width) rotate(-360+0*$deg);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(1*$deg) translateY($hex-width) rotate(1*$deg);
+    }
+    to {
+        transform: rotate(360+1*$deg) translateY($hex-width) rotate(-360+1*$deg);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: rotate(2*$deg) translateY($hex-width) rotate(2*$deg);
+    }
+    to {
+        transform: rotate(360+2*$deg) translateY($hex-width) rotate(-360+2*$deg);
+    }
+}
+
+@keyframes orbit4 {
+    from {
+        transform: rotate(3*$deg) translateY($hex-width) rotate(3*$deg);
+    }
+    to {
+        transform: rotate(360+3*$deg) translateY($hex-width) rotate(-360+3*$deg);
+    }
+}
+
+@keyframes orbit5 {
+    from {
+        transform: rotate(4*$deg) translateY($hex-width) rotate(4*$deg);
+    }
+    to {
+        transform: rotate(360+4*$deg) translateY($hex-width) rotate(-360+4*$deg);
+    }
+}
+
+@keyframes orbit6 {
+    from {
+        transform: rotate(5*$deg) translateY($hex-width) rotate(5*$deg);
+    }
+    to {
+        transform: rotate(360+5*$deg) translateY($hex-width) rotate(-360+5*$deg);
+    }
+}
+
+@keyframes orbit7 {
+    from {
+        transform: rotate(6*$deg) translateY($hex-width) rotate(6*$deg);
+    }
+    to {
+        transform: rotate(360+6*$deg) translateY($hex-width) rotate(-360+6*$deg);
+    }
+}
+
+@keyframes orbit8 {
+    from {
+        transform: rotate(7*$deg) translateY($hex-width) rotate(7*$deg);
+    }
+    to {
+        transform: rotate(360+7*$deg) translateY($hex-width) rotate(-360+7*$deg);
+    }
+}
+
+@keyframes orbit9 {
+    from {
+        transform: rotate(8*$deg) translateY($hex-width) rotate(8*$deg);
+    }
+    to {
+        transform: rotate(360+8*$deg) translateY($hex-width) rotate(-360+8*$deg);
+    }
+}
+
+@keyframes orbit10 {
+    from {
+        transform: rotate(9*$deg) translateY($hex-width) rotate(9*$deg);
+    }
+    to {
+        transform: rotate(360+9*$deg) translateY($hex-width) rotate(-360+9*$deg);
+    }
+}
+
+@keyframes orbit11 {
+    from {
+        transform: rotate(10*$deg) translateY($hex-width) rotate(10*$deg);
+    }
+    to {
+        transform: rotate(360+10*$deg) translateY($hex-width) rotate(-360+10*$deg);
+    }
+}
+
+@keyframes orbit12 {
+    from {
+        transform: rotate(11*$deg) translateY($hex-width) rotate(11*$deg);
+    }
+    to {
+        transform: rotate(360+11*$deg) translateY($hex-width) rotate(-360+11*$deg);
+    }
+}

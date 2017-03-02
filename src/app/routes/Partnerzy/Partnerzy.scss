@@ -1,25 +1,34 @@
-$hex-width: 100vh * 0.33;
-$partner-hex-width: $hex-width*.3;
-.content{
-    background-color: black !important;
->.container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-}
+@import 'keyFrames';
+@import 'values';
+@import 'animations';
+
+
 
 .partnerzy {
     background-color: black;
     margin-top: 0px;
+
+    > .content {
+    background-color: black !important;
+    >.container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+    .main-hex{
+        padding-top: 40px;
+    }
+
     .main-hex,
     .partners-hexes {
         height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index:2;
-        .hex1{
+        z-index: 2;
+        .hex1 {
             width: $hex-width*.33;
             height: $hex-width*.33;
             padding: 55px 0;
@@ -29,124 +38,57 @@ $partner-hex-width: $hex-width*.3;
             transform: rotate(60deg);
             display: none;
         }
-        
-        .hex{background-image: url(./../../assets/hex.png);
+        .hex {
+            background-image: url(./../../assets/hex.png);
             background-size: 100%;
             background-color: white;
             z-index: 100;
-            width: $hex-width;
-            height: $hex-width;
-            padding: 8vh 3vh;
+            width: $hex-width+10;
+            height: $hex-width+10;
+            padding: 7vh;
             text-align: center;
             z-index: 1;
         }
     }
     .partners-hex {
+        background-color: black;
         height: $partner-hex-width * 1.726;
         width: $partner-hex-width * 1.726;
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
+
+        .rotation{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .hover{
+            background-image: url(./../../assets/hex.png);   
+            background-size: 100%;
+            position: absolute;
+            height: $partner-hex-width * 1.726;
+            width: $partner-hex-width * 1.726;
+            top: 0;
+            overflow: auto;
+            border: 2px solid black;
+        }
+
+        img{
+            max-width: 95%;
+            max-height: 95%;
+        }
     }
     .partners-hexes {
         position: absolute;
         width: 100%;
         top: 110px;
     }
-    .partner-hex1,
-    .partner-hex2,
-    .partner-hex3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $partner-hex-width;
-        height: $partner-hex-width * 1.726;
-        background-color: lightgray;
-    }
-    .partner-hex2,
-    .partner-hex3 {
-        transform: rotate(60deg);
-    }
-
-    .partner-hex1{
-        transform: rotate(60deg);
-    }
-    .partner-hex3{
-        transform: rotate(240deg);
-
-    }
-
-    .partner1{
-        animation: orbit1 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(60deg);
-        }
-    }
-
-    .partner2{
-        animation: orbit2 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(-60deg);
-        }
-    }
-
-    .partner3{
-        animation: orbit3 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(180deg);
-        }
-    }
-
-    .partner4{
-        animation: orbit4 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(60deg);
-        }
-    }
-
-    .partner5{
-        animation: orbit5 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(-60deg);
-        }
-    }
-
-    .partner6{
-        animation: orbit6 15s linear infinite;
-         .partner-hex1{
-            transform: rotate(180deg);
-        }
-    }
-
-}
-
-@keyframes orbit1 {
-	from { 	transform: rotate(0deg) translateY($hex-width) rotate(0deg); }
-	to   {  transform: rotate(360deg) translateY($hex-width) rotate(-360deg); }
-}
-
-@keyframes orbit2 {
-	from { 	transform: rotate(60deg) translateY($hex-width) rotate(60deg); }
-	to   {  transform: rotate(420deg) translateY($hex-width) rotate(-300deg); }
-}
-
-@keyframes orbit3 {
-	from { 	transform: rotate(120deg) translateY($hex-width) rotate(120deg); }
-	to   {  transform: rotate(480deg) translateY($hex-width) rotate(-240deg); }
-}
-
-@keyframes orbit4 {
-	from { 	transform: rotate(180deg) translateY($hex-width) rotate(180deg); }
-	to   {  transform: rotate(540deg) translateY($hex-width) rotate(-180deg); }
-}
-
-@keyframes orbit5 {
-	from { 	transform: rotate(240deg) translateY($hex-width) rotate(240deg); }
-	to   {  transform: rotate(600deg) translateY($hex-width) rotate(-120deg); }
-}
-
-@keyframes orbit6 {
-	from { 	transform: rotate(300deg) translateY($hex-width) rotate(300deg); }
-	to   {  transform: rotate(660deg) translateY($hex-width) rotate(-60deg); }
 }

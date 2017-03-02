@@ -1,0 +1,84 @@
+@import 'values';
+.partner1 {
+    animation: orbit1 15s linear infinite;
+    .rotation {
+        transform: rotate(0*2*$deg*-1);
+    }
+}
+
+.partner2 {
+    animation: orbit2 15s linear infinite;
+    .rotation {
+        transform: rotate(1*2*$deg*-1);
+    }
+}
+
+.partner3 {
+    animation: orbit3 15s linear infinite;
+    .rotation {
+        transform: rotate(2*2*$deg*-1);
+    }
+}
+
+.partner4 {
+    animation: orbit4 15s linear infinite;
+    .rotation {
+        transform: rotate(3*2*$deg*-1);
+    }
+}
+
+.partner5 {
+    animation: orbit5 15s linear infinite;
+    .rotation {
+        transform: rotate(4*2*$deg*-1);
+    }
+}
+
+.partner6 {
+    animation: orbit6 15s linear infinite;
+    .rotation {
+        transform: rotate(5*2*$deg*-1);
+    }
+}
+
+.partner7 {
+    animation: orbit7 15s linear infinite;
+    .rotation {
+        transform: rotate(6*2*$deg*-1);
+    }
+}
+
+.partner8 {
+    animation: orbit8 15s linear infinite;
+    .rotation {
+        transform: rotate(7*2*$deg*-1);
+    }
+}
+
+.partner9 {
+    animation: orbit9 15s linear infinite;
+    .rotation {
+        transform: rotate(8*2*$deg*-1);
+    }
+}
+
+.partner10 {
+    animation: orbit10 15s linear infinite;
+    .rotation {
+        transform: rotate(9*2*$deg*-1);
+    }
+}
+
+.partner11 {
+    animation: orbit11 15s linear infinite;
+    .rotation {
+        transform: rotate(10*2*$deg*-1);
+    }
+}
+
+.partner12 {
+    animation: orbit12 15s linear infinite;
+    .rotation {
+        transform: rotate(11*2*$deg*-1);
+    }
+}
