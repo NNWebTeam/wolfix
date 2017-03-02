@@ -2,7 +2,13 @@
 @import 'values';
 @import 'animations';
 
-.content {
+
+
+.partnerzy {
+    background-color: black;
+    margin-top: 0px;
+
+    > .content {
     background-color: black !important;
     >.container {
         margin: 0;
@@ -10,10 +16,6 @@
         width: 100%;
     }
 }
-
-.partnerzy {
-    background-color: black;
-    margin-top: 0px;
 
     .main-hex{
         padding-top: 40px;
