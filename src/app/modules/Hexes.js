@@ -22,7 +22,7 @@ export const showHexes = () => ({
 // ------------------------------------
 
 export const initialState = {
-    hexes: true
+    hexes: false
 }
 
 export default createReducer(initialState, {

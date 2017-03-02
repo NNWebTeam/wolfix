@@ -1,0 +1,66 @@
+$hex-width: 130px;
+$partner-hex-width: 80px;
+.content>.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.partnerzy {
+    .main-hex,
+    .partners-hexes {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hex1,
+        .hex2,
+        .hex3 {
+            width: $hex-width;
+            height: $hex-width * 1.726;
+            background-color: red;
+        }
+        .hex2,
+        .hex3 {
+            transform: rotate(60deg);
+        }
+    }
+    .partners-hex {
+        height: $partner-hex-width * 1.726;
+        width: $partner-hex-width * 1.726;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: orbit2 15s linear infinite;
+    }
+    .partners-hexes {
+        position: absolute;
+        width: 100%;
+        top: 90px;
+    }
+    .partner-hex1,
+    .partner-hex2,
+    .partner-hex3 {
+        width: $partner-hex-width;
+        height: $partner-hex-width * 1.726;
+        background-color: blue;
+    }
+    .partner-hex2,
+    .partner-hex3 {
+        transform: rotate(60deg);
+    }
+
+    .partner-hex1{
+        transform: rotate(60deg);
+    }
+    .partner-hex3{
+        transform: rotate(240deg);
+
+    }
+
+}
+
+@keyframes orbit2 {
+	from { 	transform: rotate(0deg) translateY($hex-width*1.7) rotate(0deg); }
+	to   {  transform: rotate(360deg) translateY($hex-width*1.7) rotate(-360deg); }
+}

@@ -19,7 +19,7 @@ export const turnOffAnimation = () => ({
 // ------------------------------------
 
 export const initialState = {
-    animation: true
+    animation: false
 }
 
 export default createReducer(initialState, {
