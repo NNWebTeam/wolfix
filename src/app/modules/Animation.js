@@ -27,7 +27,12 @@ export const insertHexToMainHex = text => ({
 export const initialState = {
     animation: false,
     text: '',
-    firstPartner: 'first partner'
+    firstPartner: 'first',
+    secondPartner: 'second',
+    thirdPartner: 'third',
+    fourthPartner: 'fourth',
+    fifthPartner: 'fifth',
+    sixthPartner: 'sixth'
 }
 
 export default createReducer(initialState, {

@@ -3,7 +3,16 @@ import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 import './Partnerzy.scss'
 
-const Partnerzy = ({firstPartner, text, insertHexToMainHex}) =>
+const Partnerzy = ({
+	firstPartner,
+	secondPartner,
+	thirdPartner,
+	fourthPartner,
+	fifthPartner,
+	sixthPartner,
+	text,
+	insertHexToMainHex
+}) =>
 	<div className="partnerzy">
 		<div className="main-hex">
 			<div className="hex1">
@@ -19,52 +28,52 @@ const Partnerzy = ({firstPartner, text, insertHexToMainHex}) =>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{firstPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="partners-hex partner2" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex partner2" onClick={() => insertHexToMainHex(secondPartner)}>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{secondPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="partners-hex partner3" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex partner3" onClick={() => insertHexToMainHex(thirdPartner)}>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{thirdPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="partners-hex partner4" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex partner4" onClick={() => insertHexToMainHex(fourthPartner)}>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{fourthPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="partners-hex partner5" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex partner5" onClick={() => insertHexToMainHex(fifthPartner)}>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{fifthPartner}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="partners-hex partner6" onClick={() => insertHexToMainHex(firstPartner)}>
+			<div className="partners-hex partner6" onClick={() => insertHexToMainHex(sixthPartner)}>
 				<div className="partner-hex1">
 					<div className="partner-hex2">
 						<div className="partner-hex3">
-							asdfasdfasdf
+							{sixthPartner}
 						</div>
 					</div>
 				</div>

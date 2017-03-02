@@ -6,10 +6,23 @@ const mapActionCreators = {
     insertHexToMainHex
 }
 const mapStateToProps = ({
-    animation: {text, firstPartner}
+    animation: {
+        text,
+        firstPartner,
+        secondPartner,
+        thirdPartner,
+        fourthPartner,
+        fifthPartner,
+        sixthPartner
+    }
 }) => ({
     text,
-    firstPartner
+    firstPartner,
+    secondPartner,
+    thirdPartner,
+    fourthPartner,
+    fifthPartner,
+    sixthPartner
 })
 
 export default connect(mapStateToProps, mapActionCreators)(Partnerzy)
