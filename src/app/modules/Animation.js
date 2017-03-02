@@ -25,7 +25,7 @@ export const insertHexToMainHex = text => ({
 // ------------------------------------
 
 export const initialState = {
-    animation: false,
+    initAnimation: true,
     text: '',
     firstPartner: 'first',
     secondPartner: 'second',
@@ -36,6 +36,6 @@ export const initialState = {
 }
 
 export default createReducer(initialState, {
-  [TURN_OFF_ANIMATION]: () => ({animation: false}),
+  [TURN_OFF_ANIMATION]: () => ({initAnimation: false}),
   [CHOOSE_HEX]: (state, {text}) => ({text})
 })

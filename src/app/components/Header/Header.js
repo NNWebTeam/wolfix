@@ -6,7 +6,6 @@ import { Link } from 'react-router'
 class Header extends Component {
 	constructor(props) {
         super(props)
-		console.log(props)
         this.props.fetchUser()
         this.logOut = this.logOut.bind(this)
     }

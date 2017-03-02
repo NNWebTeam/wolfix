@@ -3,11 +3,13 @@ import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 import {Link} from 'react-router'
 import './WolfNews.scss'
+import AddNewsModal from '../../components/modals/AddNewsModal'
 
 class WolfNews extends Component {
   render() {
 	return (
 	  <div className="wolf-news">
+	  	<AddNewsModal />
 	  	<h2>Wolf news</h2>
 			<Row>
 				<Col xs={4} md={6}><img className="img-responsive pull-right" src="http://projekt.dgc.pl/wp-content/uploads/2016/09/5.-Transparentny-200x230.jpg" alt=""/></Col>
@@ -15,7 +17,7 @@ class WolfNews extends Component {
 				<h3>News 1</h3>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit sed diam ornare fermentum. Vivamus quis sollicitudin elit, posuere tincidunt justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut congue mattis ultricies. Donec placerat turpis sit amet dapibus dapibus. Pellentesque efficitur suscipit nibh.
 				<div className="link pull-right">
-					<Link to="/">Czytaj więcej</Link>
+					<Link onClick={() => {this.props.show('newsModal')}}>Czytaj więcej</Link>
 				</div>
 				</Col>
 			</Row>
