@@ -52,15 +52,18 @@
         justify-content: center;
         background-color: black;
         &-logo {
-            position: absolute;
-            left: 47%;
-            top: 30px;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                width: 359px;
+                margin-top: -5vh;
             img {
                 height: 50px;
             }
         }
         &-content {
-            height: 100%;
+            .hex-row{
+                height: 100%;
             display: inline-flex;
             align-items: center;
             margin-left: 97px;
@@ -167,5 +170,6 @@
                 }
             }
         }
+    }
     }
 }
