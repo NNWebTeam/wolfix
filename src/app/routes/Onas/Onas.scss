@@ -32,7 +32,7 @@
     }
     a:hover{
         > img{
-            filter: brightness(1);
+            filter: grayscale(0);
             z-index: 999;
         }
 

@@ -41,7 +41,7 @@ class Home extends Component {
                     <Link className="hexAnimation10 wolf-news" to='/wolf-news'>
                       <Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
                     </Link>
-                    <Link className="druk hexAnimation9" to='/o-nas'>
+                    <Link className="druk hexAnimation9" to='/druk-3d'>
                       <Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
                     </Link>
                   </div>
