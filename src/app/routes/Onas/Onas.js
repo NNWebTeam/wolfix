@@ -15,10 +15,10 @@ class Onas extends Component {
   render() {
 		return (
 			<div className="onas container">
-				<h1>Onas</h1>
+				<h2>Onas</h2>
 				<div className="onas-hexes">
 					<div className="onas-hexes-left">
-						<Link to='/wolf-team' className="hex1">
+						<Link to='/o-nas-info' className="hex1">
 							<div className="info">
 								<Image src={onas}/>
 								O nas

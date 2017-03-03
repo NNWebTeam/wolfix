@@ -40,7 +40,6 @@ module.exports = (options) => {
       }),
       new HtmlWebpackPlugin({
         template: Path.join(__dirname, '../src/index.html'),
-        baseUrl: process.env.NODE_ENV == 'development'?'/app/':'/app/'
       }),
     ],
   };
