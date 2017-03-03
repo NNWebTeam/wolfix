@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import {Link} from 'react-router'
+import buttonBack from './../../assets/button.png'
 
 const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
   <div className="app">
@@ -13,7 +14,7 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
             </source>
           </video>
           <div className="pomin">
-            <Link className="link" to="/" onClick={() => turnOffAnimation()}>Pomiń intro</Link>
+            <Link className="link" to="/" style={buttonStyle} onClick={() => turnOffAnimation()}>Pomiń intro</Link>
           </div>
         </div>
       : hexes
@@ -29,6 +30,8 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
   </div>
 
 export default App
+
+const buttonStyle = {background: `url(${buttonBack})`}
 
   {/*<section className="page">
           <Header />

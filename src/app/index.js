@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { Router, browserHistory } from 'react-router'
 import ReduxPromise from 'redux-promise'
+import './assets/favicon.ico';
 
 import reducers from './modules'
 import routes from './routes'

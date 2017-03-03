@@ -31,6 +31,7 @@
             display: none;
         }
         .hex {
+            border-radius: 50%;
             background-color: #fff;
             z-index: 100;
             width: $hex-width+10;
@@ -40,7 +41,7 @@
             z-index: 1;
         }
     }
-    .partners-hex {
+    .partners-hex {    
         background-color: black;
         height: $partner-hex-width * 1.726;
         width: $partner-hex-width * 1.726;
@@ -64,7 +65,8 @@
             position: absolute;
             height: $partner-hex-width * 1.726;
             width: $partner-hex-width * 1.726;
-            top: 0;
+            top: -1px;
+            left: -1px;
             overflow: auto;
             border: 2px solid black;
         }
@@ -75,6 +77,7 @@
         }
     }
     .partners-hexes {
+        overflow: hidden;
         position: absolute;
         width: 100%;
         top: 110px;

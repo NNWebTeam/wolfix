@@ -29,7 +29,8 @@ module.exports = (options) => {
         {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
         {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream"},
         {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"},
-        {test: /\.(jpg|jpeg|png|gif)$/i, loader: "file" }
+        {test: /\.(jpg|jpeg|png|gif)$/i, loader: "file" },
+        {test: /\.(ico)$/i, loader: "file-loader?name=[name].[ext]" }
       ],
     },
     plugins: [
@@ -40,6 +41,7 @@ module.exports = (options) => {
       }),
       new HtmlWebpackPlugin({
         template: Path.join(__dirname, '../src/index.html'),
+        favicon: 'src/app/assets/favicon.ico'
       }),
     ],
   };
