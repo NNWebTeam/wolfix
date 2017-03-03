@@ -1,0 +1,67 @@
+.wolfteam{
+    background-color: black;
+
+    .container{
+        min-height: 80vh;
+
+    }
+    
+    .team{
+        margin-top: -5vh;
+        display: inline-flex;
+        width: 100%;
+        min-height: 70vh;    
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .wolf-1,
+        .wolf-2,
+        .wolf-3,
+        .wolf-4,
+        .wolf-5{
+                text-align: center;
+            > img{
+            opacity: 0;
+            transition: .3s;
+            }
+            &:hover{
+                >img{
+                    opacity: 1;
+                }
+            }
+
+            .name{
+                margin: 0;
+                color: #fff;
+            }
+
+            .desc{
+                color: #777;
+                font-style: italic;
+                font-weight: normal;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            
+        }
+
+        .wolf-1{
+            background-size: 100%; 
+        }
+        
+    }
+}
+.row{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+    .col-md-2{
+        width: 20%;
+    }
+}

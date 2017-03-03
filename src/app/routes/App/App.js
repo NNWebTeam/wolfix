@@ -21,10 +21,8 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
         : <section className="page">
             <Header />
             <div className="content">
-              <div className="container">
                 {children}
               </div>
-            </div>
             <Footer />
           </section>
     }

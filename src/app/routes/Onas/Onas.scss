@@ -1,0 +1,66 @@
+.onas {
+
+    .hex-img{
+        height: 200px;
+            filter: grayscale(1);
+            z-index: -1;
+    }
+    svg {
+        height: 217px;
+        width: 200px;
+        margin-left: -18px;
+        polyline {
+            transform: scale(.35);
+        }
+    }
+    &-hexes {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &-center {
+            .hex-top{
+                margin-bottom: -5px;
+            }
+        }
+        &-left{
+            margin-right: -30px;
+        }
+        &-right{
+            margin-left: -30px;
+        }
+    }
+    a:hover{
+        > img{
+            filter: brightness(1);
+            z-index: 999;
+        }
+
+        .info{
+            >img{
+                
+            transform: scale(1);
+            }
+        }
+    }
+
+    .info{
+            position: absolute;
+            flex-direction: column;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            > img {
+                transition: .3s;
+            transform: scale(.9);
+
+            }
+    }
+}

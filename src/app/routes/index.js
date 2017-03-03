@@ -15,6 +15,7 @@ import WolfNews from './WolfNews'
 import Druk3D from './Druk3D'
 import Portfolio from './Portfolio'
 import Onas from './Onas'
+import WolfTeam from './WolfTeam'
 import Partnerzy from './Partnerzy'
 
 export default (
@@ -30,6 +31,7 @@ export default (
     <Route path="/druk-3d" component={Druk3D} />
     <Route path="/portfolio" component={Portfolio} />
     <Route path="/o-nas" component={Onas} />
+    <Route path="/wolf-team" component={WolfTeam} />
     <Route path="/partnerzy" component={Partnerzy} />
 
     <Route path='*' component={() => <div>Error 404</div>} />

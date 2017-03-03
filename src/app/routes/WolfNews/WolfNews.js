@@ -6,7 +6,7 @@ import './WolfNews.scss'
 import AddNewsModal from '../../components/modals/AddNewsModal'
 
 const WolfNews = ({show, addNews}) =>
-<div className="wolf-news">
+<div className="wolf-news container">
 	<AddNewsModal handleSubmit={addNews}/>
 	<h2>Wolf news</h2>
 	<Row>

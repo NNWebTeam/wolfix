@@ -6,7 +6,7 @@
   "repository": "git@github.com:btomashvili/react-redux-firebase-boilerplate.git",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack-dev.config.js --watch --colors",
-    "build": "rm -rf dist && ./node_modules/.bin/webpack --config ./webpack/webpack-prod.config.js --colors",
+    "build": "./node_modules/.bin/webpack --config ./webpack/webpack-prod.config.js --colors",
     "start": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack-dev.config.js --watch --colors",
     "test": "./node_modules/.bin/eslint src && ./node_modules/.bin/mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
@@ -16,8 +16,8 @@
   "author": "Beka Tomashvili",
   "contributors": [
     {
-      "name": "Alexander Wong",
-      "email": "admin@alexander-wong.com",
+      "name": "NNWebTeam",
+      "email": "NNWebTeam@gmail.com",
       "url": "https://www.alexander-wong.com/"
     }
   ],
