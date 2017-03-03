@@ -31,9 +31,7 @@
             display: none;
         }
         .hex {
-            background-image: url(./../../assets/hex.png);
-            background-size: 100%;
-            background-color: white;
+            background-color: #fff;
             z-index: 100;
             width: $hex-width+10;
             height: $hex-width+10;
@@ -63,8 +61,6 @@
         }
 
         .hover{
-            background-image: url(./../../assets/hex.png);   
-            background-size: 100%;
             position: absolute;
             height: $partner-hex-width * 1.726;
             width: $partner-hex-width * 1.726;
