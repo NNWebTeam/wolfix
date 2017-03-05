@@ -14,7 +14,7 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
             </source>
           </video>
           <div className="pomin">
-            <Link className="link" to="/" style={buttonStyle} onClick={() => turnOffAnimation()}>Pomiń intro</Link>
+            <Link className="link" style={buttonStyle} onClick={() => turnOffAnimation()}>Pomiń intro</Link>
           </div>
         </div>
       : hexes

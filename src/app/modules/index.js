@@ -5,6 +5,7 @@ import user from './User'
 import animation from './Animation'
 import hexes from './Hexes'
 import news from './News'
+import projects from './Projects'
 
 export default combineReducers({
   form,
@@ -12,5 +13,6 @@ export default combineReducers({
   user,
   animation,
   hexes,
-  news
+  news,
+  projects
 })
