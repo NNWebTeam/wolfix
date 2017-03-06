@@ -15,7 +15,7 @@ class Onas extends Component {
   render() {
 		return (
 			<div className="onas container">
-				<h2>Onas</h2>
+				<h2>O nas</h2>
 				<div className="onas-hexes">
 					<div className="onas-hexes-left">
 						<Link to='/o-nas-info' className="hex1">

@@ -6,6 +6,7 @@ import animation from './Animation'
 import hexes from './Hexes'
 import news from './News'
 import projects from './Projects'
+import portfolio from './Portfolio'
 
 export default combineReducers({
   form,
@@ -14,5 +15,6 @@ export default combineReducers({
   animation,
   hexes,
   news,
-  projects
+  projects,
+  portfolio
 })
