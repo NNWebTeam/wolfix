@@ -47,7 +47,7 @@ class Onas extends Component {
 						</div>
 					</div>
 					<div className="onas-hexes-right">
-						<Link to='/wolf-team'>
+						<Link to='/kontakt'>
 								<div className="info">
 									<Image src={kontakt}/>
 									Kontakt

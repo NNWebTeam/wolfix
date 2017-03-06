@@ -10,4 +10,8 @@ module.exports = {
         messagingSenderId: "376966859455"
 
     },
+
+    MAPS_CONFIG: {
+        apiKey: 'AIzaSyAXvRQPF2gPdEuQOXOhAtSqNrW7gXokuOU'
+    }
 };

@@ -52,8 +52,8 @@ class Portfolio extends Component {
         </Row>
         <Coverflow
           width={900}
-          height={400}
-          displayQuantityOfSide={2}
+          height={300}
+          displayQuantityOfSide={3}
           navigation={false}
           enableHeading={false}
           active={this.state.active}

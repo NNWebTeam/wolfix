@@ -19,6 +19,7 @@ import OnasInfo from './OnasInfo'
 import WolfTeam from './WolfTeam'
 import Partnerzy from './Partnerzy'
 import Projekty from './Projekty'
+import Kontakt from './Kontakt'
 
 export default (
   <Route path="/" component={App}>
@@ -37,6 +38,7 @@ export default (
     <Route path="/wolf-team" component={WolfTeam} />
     <Route path="/partnerzy" component={Partnerzy} />
     <Route path="/projekty" component={Projekty} />
+    <Route path="/kontakt" component={Kontakt} />
 
     <Route path='*' component={() => <div>Error 404</div>} />
   </Route>
