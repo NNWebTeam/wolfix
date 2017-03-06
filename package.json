@@ -73,6 +73,7 @@
     "react-addons-shallow-compare": "^15.4.2",
     "react-amazon-gallery": "^0.2.8",
     "react-bootstrap": "^0.30.7",
+    "react-coverflow": "^0.2.3",
     "react-document-title": "^2.0.2",
     "react-dom": "^0.14.3",
     "react-dropzone": "^3.10.0",
