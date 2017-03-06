@@ -4,8 +4,10 @@ import Header from '../../components/Header'
 import {Link} from 'react-router'
 import buttonBack from './../../assets/button.png'
 
+
 const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
   <div className="app">
+    
     {initAnimation
       ? <div className='animation'>
           <video 

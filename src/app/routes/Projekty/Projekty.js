@@ -4,6 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap'
 import Gallery from 'react-amazon-gallery'
 import Coverflow from 'react-coverflow'
 import './Projekty.scss'
+import buttonBack from './../../assets/button.png'
 
 const config = {
    bkgSize: "cover",
@@ -63,6 +64,15 @@ class Portfolio extends Component {
           <img src={projects[2].imgs[0]} onClick={() => {this.setState({active: 2})}}/>
           <img src={projects[3].imgs[0]} onClick={() => {this.setState({active: 3})}}/>
         </Coverflow>
+        <div className="pomin">
+          <a 
+            className="link"
+            style={{background: `url(${buttonBack})`}}
+            onClick={() => {window.history.back()}}
+          >
+            Powrót
+          </a>
+        </div>
       </Grid>
     )
   }

@@ -15,43 +15,43 @@ class Druk3D extends Component {
 				<div className="technics">
 					<div className="print">
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Wolfix Filamenty</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Projektowanie</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Opis technologii</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Opis technologii</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Drukarki 3d</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">Industry</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/">
+							<Link to="/projekty">
 								<div className="tech-name">EDV</div>
 								<Image src={hexr}/>
 							</Link>

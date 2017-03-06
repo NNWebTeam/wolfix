@@ -25,7 +25,7 @@ export const insertHexToMainHex = text => ({
 // ------------------------------------
 
 export const initialState = {
-    initAnimation: false,
+    initAnimation: true,
     text: '',
     firstPartner: 'first',
     secondPartner: 'second',
