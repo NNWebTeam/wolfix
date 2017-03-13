@@ -1,7 +1,13 @@
 export const RESET_STORE = Symbol('RESET_STORE')
+export const SET_NEWS = Symbol('SET_NEWS')
 
 export default (initialState, handlers, finalizer = x => x) => (state = initialState, action) => {
-  if (action.type) {
+  if(action.type === 'SET_NEWS'){
+    const { news } = action;
+            return news;
+  }
+  else{
+    if (action.type) {
     const handler = handlers[action.type]
     if (handler) {
       const result = handler(state, action)
@@ -14,5 +20,6 @@ export default (initialState, handlers, finalizer = x => x) => (state = initialS
       return finalizer({...state, ...result})
     }
   }
+}
   return state
 }

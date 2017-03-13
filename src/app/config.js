@@ -3,15 +3,15 @@ module.exports = {
   // Change this to your firebase configuration! (Add Firebase to your web app)
     FIREBASE_CONFIG: {
 
-        apiKey: "AIzaSyAv-WBg52yYX8CBrjPJA93VzLAhPPQFFcA",
-        authDomain: "wolfix-3e923.firebaseapp.com",
-        databaseURL: "https://wolfix-3e923.firebaseio.com",
-        storageBucket: "wolfix-3e923.appspot.com",
-        messagingSenderId: "376966859455"
+        apiKey: "AIzaSyA19QGJEgW87eJnehGQgTV_z2flEmC3OO4",
+    authDomain: "goalcoach-1c1e3.firebaseapp.com",
+    databaseURL: "https://goalcoach-1c1e3.firebaseio.com",
+    storageBucket: "goalcoach-1c1e3.appspot.com",
+    messagingSenderId: "208565856085"
 
     },
 
     MAPS_CONFIG: {
-        apiKey: 'AIzaSyAXvRQPF2gPdEuQOXOhAtSqNrW7gXokuOU'
+        apiKey: 'AIzaSyA19QGJEgW87eJnehGQgTV_z2flEmC3OO4'
     }
 };

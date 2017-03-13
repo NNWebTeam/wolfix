@@ -1,12 +1,18 @@
 import { connect } from 'react-redux'
 import { show } from 'redux-modal'
 import WolfNews from './WolfNews'
-import { addNews } from '../../modules/News'
+import { addNews, setNews } from '../../modules/News'
 
 const mapActionCreators = {
     show,
-    addNews
+    addNews,
+    setNews
 }
-const mapStateToProps = ({}) => ({})
+const mapStateToProps = (state) => {
+    const {news}  = state;
+    return{
+        news
+    }
+}
 
 export default connect(mapStateToProps, mapActionCreators)(WolfNews)
