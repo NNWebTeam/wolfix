@@ -6,15 +6,40 @@ import FireBaseTools from '../../utils/firebase'
 import * as firebase from 'firebase';
 import './WolfNews.scss'
 import AddNewsModal from '../../components/modals/AddNewsModal'
+import loader from './../../assets/loader.gif'
 
 let postForm = {
 	header: '',
-	body: ''
+	body: '',
+	fileName: '',
+	index: 0
 }
+
+let postFile;
 
 function log(e) {
 	e.preventDefault();
+		postForm.fileName = postFile.name;
+	console.log(postForm)
 	FireBaseTools.getDatabaseReference(`/news/`).push(postForm)
+	
+		let storageRef = firebase.storage().ref('news/'+postFile.name);
+		let task = storageRef.put(postFile);
+		console.log(firebase.storage().ref('news/'+postFile.name));
+
+		task.on('state_changed',
+		function progress(snapshot){
+			var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+			console.log(percentage)
+			// uploader.value = percentage;
+		},
+		function error(err){
+
+		},
+		function complete(){
+
+		}
+	)
 
 }
 
@@ -26,6 +51,11 @@ function handleBody(e) {
 	postForm.body = e.target.value;
 }
 
+function handleImg(e) {
+    e.preventDefault();
+    postFile = e.target.files[0];
+  }
+
 
 class WolfNews extends Component {
 	constructor(props) {
@@ -33,15 +63,26 @@ class WolfNews extends Component {
 	}
 
 	componentDidMount() {
+		let rand = (Math.random() * 100) + 0;
+		console.log(rand)
 		firebase.database().ref('news').on('value', snap => {
 			let newNews = [];
-			snap.forEach(news => {
+			let index = 0;
+			snap.forEach((news) => {
 				const tmp = news.val();
+				let tmpFileName = '';
+				let storageRef = firebase.storage().ref('news/'+tmp.fileName);
+				storageRef.getDownloadURL().then(function(url) {
+					let img = document.getElementById('newsImg'+index);
+					console.log(index)
+					img.src = url;
+					index++;
+				})
 				newNews.push(tmp);
 			})
 			this.newsT = newNews;
 			this.props.setNews(newNews);
-		})
+		})		
 	}
 	render() {
 		let niu = [];
@@ -50,7 +91,7 @@ class WolfNews extends Component {
 		}
 		return (
 			<div className="wolf-news container">
-				<AddNewsModal handleSubmit={log} handleChangeHeader={handleHeader} handleChangeBody={handleBody} />
+				<AddNewsModal handleSubmit={log} handleChangeHeader={handleHeader} handleChangeBody={handleBody} handleChangeImg={handleImg} />
 				<h2>Wolf news</h2>
 				<Row>
 					<div onClick={() => this.props.show('newsModal')} className="link pull-left">
@@ -62,12 +103,12 @@ class WolfNews extends Component {
 						if (index % 2 == 0) {
 							return (
 								<Row>
-									<Col xs={4} md={6}><img className="img-responsive pull-right" src="http://wolfix.pl/wp-content/uploads/2016/09/5.-Transparentny-200x230.jpg" alt="" /></Col>
+									<Col xs={4} md={6}><img className="img-responsive pull-right" src={loader} alt={news.fileName} id={'newsImg'+index}/></Col>
 									<Col xs={8} md={6}>
 										<h3>{news.header}</h3>
 										{news.body}
 										<div className="link pull-right">
-											<Link to="/projekty">Czytaj więcej</Link>
+											<Link to="/projekty">Czytaj więcej{index}</Link>
 										</div>
 									</Col>
 								</Row>
@@ -79,10 +120,10 @@ class WolfNews extends Component {
 										<h3>{news.header}</h3>
 										{news.body}
 									<div className="link pull-right">
-											<Link to="/projekty">Czytaj więcej</Link>
+											<Link to="/projekty">Czytaj więcej{index}</Link>
 										</div>
 									</Col>
-									<Col xs={4} md={6}><img className="img-responsive pull-left" src="http://wolfix.pl/wp-content/uploads/2016/09/test-hex-logo-200x230.png" alt="" /></Col>
+									<Col xs={4} md={6}><img className="img-responsive pull-left" src={loader} alt={news.fileName} id={'newsImg'+index} /></Col>
 								</Row>
 							)
 						}

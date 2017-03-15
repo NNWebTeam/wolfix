@@ -3,7 +3,7 @@ import { Button, Modal } from 'react-bootstrap'
 import { connectModal } from 'redux-modal'
 import { Field, reduxForm } from 'redux-form'
 
-let AddNewsModal = ({ show, handleHide, handleSubmit, handleChangeHeader, handleChangeBody, pristine, reset, submitting }) =>
+let AddNewsModal = ({ show, handleHide, handleSubmit, handleChangeHeader, handleChangeBody, handleChangeImg, pristine, reset, submitting }) =>
   <Modal show={show} >
     <Modal.Header>
       <Modal.Title><h1>Dodaj news</h1></Modal.Title>
@@ -21,6 +21,14 @@ let AddNewsModal = ({ show, handleHide, handleSubmit, handleChangeHeader, handle
           <div>
             <Field name="body" component="textarea" style={{width: '100%', height: 300}} onChange={handleChangeBody}/>
           </div>
+        </div>
+        <div className="read-file">
+          <lable>
+            <input className="fileInput"
+            type="file"
+            accept="image/x-png,image/gif,image/jpeg"
+            onChange={handleChangeImg} />
+          </lable>
         </div>
       </Modal.Body>
       <Modal.Footer>
