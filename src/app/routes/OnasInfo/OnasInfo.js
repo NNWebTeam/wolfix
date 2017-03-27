@@ -6,7 +6,7 @@ class OnasInfo extends Component {
   render() {
 		return (
 			<div className="container">
-				<h2 style={{paddingBottom: '20px'}}>O nas</h2>
+				<h2 style={{paddingBottom: '20px'}}>Value</h2>
 				<div style={{fontWeight: '700', textAlign: 'center'}} >
 					Twoje wymagania to dla nas cel. A nasze cele to motor napędowy dla wszelkich działań naszej firmy. Wspólnie możemy stworzyć coś unikatowego. Niepowtarzalny design, a przy tym najwyższa jakość to nasz klucz do sukcesu. Nie jest to przypadek, lecz ciężka wspólna praca, lata doświadczenia i siła rodziny. Dzięki mieszance tych składników każdy projekt jest jedyny w swoim rodzaju.
 				</div>
