@@ -13,37 +13,29 @@ export const SET_NEWS = 'SET_NEWS'
 // Actions
 // ------------------------------------
 
-export const fetchNews = () => {
-  return {
+export const fetchNews = () => ({
     type: FETCH_NEWS,
     payload: FireBaseTools.getDatabaseReference('/news').once('value').then(e => e.val())
-  }
-}
+})
 
-export const addNews = news => {
-  console.log(news)
-  return {
+export const addNews = news => ({
     type: ADD_NEWS,
-    payload: FireBaseTools.getDatabaseReference(`/news/`).set(news)
-  }
-}
+    payload: FireBaseTools.getDatabaseReference(`/news`).push().set(news)
+})
 
-export function setNews(news){
-    const action = {
-        type: SET_NEWS,
-        news
-    };
-    return action;
-}
+export const setNews = news => ({
+    type: SET_NEWS,
+    news
+})
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
 
 export const initialState = {
-  news: []
+  news: null
 }
 
 export default createReducer(initialState, {
-  [FETCH_NEWS]: (state, {news}) => ({ news })
+  [FETCH_NEWS]: (state, {news}) => ({news})
 })

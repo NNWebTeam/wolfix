@@ -1,0 +1,36 @@
+.filamenty {
+    .coverflow__container__1P-xE {
+        background-color: transparent;
+        margin-top: 100px;
+    }
+    .coverflow__cover__25-7e {
+        box-shadow: none;
+    }
+    .pomin {
+        width: 100%;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        .link {
+        animation-name: fadeIn;
+        animation-duration: 0.2s;
+            width: 163px;
+            height: 42px;
+            transition: .0.2s ease-in-out;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
+}

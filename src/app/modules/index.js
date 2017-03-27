@@ -8,6 +8,7 @@ import news from './News'
 import projects from './Projects'
 import portfolio from './Portfolio'
 import projektowanie from './Projektowanie'
+import filamenty from './Filamenty'
 
 export default combineReducers({
   form,
@@ -18,5 +19,6 @@ export default combineReducers({
   news,
   projects,
   portfolio,
-  projektowanie
+  projektowanie,
+  filamenty
 })
