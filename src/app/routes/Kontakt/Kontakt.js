@@ -9,8 +9,10 @@ const Kontakt = () =>
   <Row>
     <Col sm={6}>
       <form>
-        <h4>tu jesteśmy</h4>
-        <p>lorem ipsum</p>
+        <h4>Adres</h4>
+        <p>WOLF PROJECT STUDIO Krzysztof Król</p>
+        <p>Gąsawy Plebańskie 14</p>
+        <p>26-502 Jastrząb</p>
         <h4>chcesz wiedzieć więcej?</h4>
         <FormControl
           id="name"

@@ -7,7 +7,7 @@ import './Onas.scss'
 import hexBlack from './../../assets/hex-black.png'
 import hexRed from './../../assets/hex-red.png'
 import team from './../../assets/team-icon.png'
-import onas from './../../assets/cog-icon.png'
+import onas from './../../assets/wolf.png'
 import pobierz from './../../assets/list-icon.png'
 import kontakt from './../../assets/mail-icon.png'
 
@@ -20,7 +20,7 @@ class Onas extends Component {
 					<div className="onas-hexes-left">
 						<Link to='/o-nas-info' className="hex1">
 							<div className="info">
-								<Image src={onas}/>
+								<Image src={onas} style={{width:'100px'}}/>
 								Value
 							</div>
 							<Image className="hex-img" src={hexBlack}/>
