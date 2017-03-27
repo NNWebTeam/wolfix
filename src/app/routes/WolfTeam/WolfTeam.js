@@ -6,12 +6,12 @@ import hexTeam1 from './../../assets/WolfTeam/1c.jpg'
 import hexTeamW1 from './../../assets/WolfTeam/1w.jpg'
 import hexTeam2 from './../../assets/WolfTeam/2c.jpg'
 import hexTeamW2 from './../../assets/WolfTeam/2w.jpg'
-import hexTeam3 from './../../assets/WolfTeam/3c.jpg'
-import hexTeamW3 from './../../assets/WolfTeam/3w.jpg'
-import hexTeam4 from './../../assets/WolfTeam/4c.jpg'
-import hexTeamW4 from './../../assets/WolfTeam/4w.jpg'
-import hexTeam5 from './../../assets/WolfTeam/5c.jpg'
-import hexTeamW5 from './../../assets/WolfTeam/5w.jpg'
+import hexTeam3 from './../../assets/WolfTeam/5c.jpg'
+import hexTeamW3 from './../../assets/WolfTeam/5w.jpg'
+import hexTeam4 from './../../assets/WolfTeam/3c.jpg'
+import hexTeamW4 from './../../assets/WolfTeam/3w.jpg'
+import hexTeam5 from './../../assets/WolfTeam/4c.jpg'
+import hexTeamW5 from './../../assets/WolfTeam/4w.jpg'
 
 class WolfTeam extends Component {
   render() {

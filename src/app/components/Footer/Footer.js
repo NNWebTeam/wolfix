@@ -13,17 +13,17 @@ const Footer = () =>
                 <Col sm={2}>
                     <Image src={logo}/>
                 </Col>
-                <Col sm={3}>
-                    <div>KRS 000 123 123 122</div>
-                    <div>REGON 23123123123213</div>
-                </Col>
-                <Col sm={3}>
-                    <div>Warszawa Jagielońska 32</div>
-                    <div>Radom Kościuszku 13</div>
-                </Col>
                 <Col sm={4}>
-                    <div>tel. +48 123 123 123</div> 
-                    <div>e-mail office@wolfix.pl</div>
+                    <div>NIP:  7991334957</div>
+                    <div>IDEA BANK  88 1950 0001 2006 7854 1161 0001</div>
+                </Col>
+                <Col sm={3}>
+                    <div>Gąsawy Plebańskie 14</div>
+                    <div>26-502 Jastrząb</div>
+                </Col>
+                <Col sm={3}>
+                    <div>tel. +48 791 599 653</div> 
+                    <div>info@wolfix.pl</div>
                 </Col>
             </Row>
         </Grid>
