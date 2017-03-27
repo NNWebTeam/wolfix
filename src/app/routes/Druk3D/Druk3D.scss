@@ -1,19 +1,19 @@
-$hexTech: 100vw/7;
+$hexTech: 100vw/8;
 .technics {
     width: 100%;
     .print {
+        display: inline-grid;
         width: 98vw;
         height: $hexTech*1.49;
-        display: inline-flex;
         justify-content: center;
         .tech {
             width: $hexTech;
             display: flex;
-            margin: 0 $hexTech*.073*-1;
+            margin: 0 $hexTech*.073*-1.1;
             &-name {
                 position: absolute;
-                width: 14.28571vw;
-                height: 14.28571vw;
+                width: 13.08571vw;
+                height: 12.48571vw;
                 padding: 12px;
                 display: flex;
                 align-items: center;
@@ -40,12 +40,17 @@ a{
                 filter: grayscale(1);
                 transition: .2s ease-in-out;
             }
-            &:nth-child(even) {
-                align-items: flex-start;
-            }
-            &:nth-child(odd) {
-                align-items: flex-end;
-            }
         }
+        
+            .top {
+                display: inline-flex;
+                align-items: flex-start;
+                margin-left: $hexTech*.42;
+            }
+            .bottom {
+                display: inline-flex;
+                align-items: flex-end;
+                margin-top: $hexTech*.27*-1;
+            }
     }
 }
