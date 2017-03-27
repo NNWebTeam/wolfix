@@ -1,4 +1,30 @@
 footer {
+    .back{
+        filter: grayscale(1);
+        transition: 0.2s ease-in-out;
+
+        .link {
+        animation-name: fadeIn;
+        animation-duration: 0.2s;
+            width: 163px;
+            height: 42px;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &:hover {
+            filter: grayscale(0);
+            text-decoration: none;
+        }
+    }
     background-color: #191919;
     min-height: 100px;
     color: #757272;

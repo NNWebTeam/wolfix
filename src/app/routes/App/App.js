@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import {Link} from 'react-router'
-import buttonBack from './../../assets/button.png'
 
 
 const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
@@ -35,8 +34,8 @@ const App = ({turnOffAnimation, initAnimation, children, hexes}) =>
         : <section className="page">
             <Header />
             <div className="content">
-                {children}
-              </div>
+              {children}
+            </div>
             <Footer />
           </section>
     }
