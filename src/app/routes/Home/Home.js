@@ -59,7 +59,7 @@ class Home extends Component {
                       <Link className="hexAnimation15 o-nas" to='/o-nas'>
                         <Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
                       </Link>
-                      <Link className="hexAnimation14 projekty" to='/o-nas'>
+                      <Link className="hexAnimation14 projekty" to='/projekty'>
                         <Polyline points={hex.pointsHover} fill={{color:'rgba(75, 75, 75, 0.3)'}} stroke={{color:'#171717'}}  strokeWidth={6}/>
                       </Link>
                     </div>
