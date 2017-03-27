@@ -2,43 +2,44 @@ import React, { Component, PropTypes } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import { connectModal } from 'redux-modal'
 import { Field, reduxForm } from 'redux-form'
+import Dropzone from 'react-dropzone'
+import './AddNewsModal.scss'
 
-let AddNewsModal = ({ show, handleHide, handleSubmit, handleChangeHeader, handleChangeBody, handleChangeImg, pristine, reset, submitting }) =>
+const AddNewsModal = ({ show, handleHide, handleSubmit, pristine, submitting, submitSucceeded }) =>
   <Modal show={show} >
     <Modal.Header>
       <Modal.Title><h1>Dodaj news</h1></Modal.Title>
     </Modal.Header>
-      <form onSubmit={handleSubmit}>
+      <form>
       <Modal.Body>
+        {submitSucceeded && <h3 style={{color: 'green'}}>Dodano nowego newsa</h3>}
         <div>
           <label>Nagłówek</label>
           <div>
-            <Field name="header" component="input" type="text" placeholder="Nagłówek" style={{width: '100%'}} onChange={handleChangeHeader}/>
+            <Field name="header" component="input" type="text" placeholder="Nagłówek" style={{width: '100%'}}/>
           </div>
         </div>
         <div>
           <label>Tekst</label>
           <div>
-            <Field name="body" component="textarea" style={{width: '100%', height: 300}} onChange={handleChangeBody}/>
+            <Field name="body" component="textarea" style={{width: '100%', height: 300}}/>
           </div>
         </div>
         <div className="read-file">
           <lable>
-            <input className="fileInput"
-            type="file"
-            accept="image/x-png,image/gif,image/jpeg"
-            onChange={handleChangeImg} />
+            <Dropzone style={{width: '100%', height: 100, border: 'grey 1px solid', padding: 5}} onDrop={() => {}}>
+              <div>
+                Kliknij lub upuść zdjęcie
+              </div>
+            </Dropzone>
           </lable>
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button type="submit" disabled={pristine || submitting}>Dodaj</Button>
-        <Button onClick={handleHide} >Close</Button>
+        <Button type="submit" disabled={pristine || submitting} onClick={handleSubmit}>Dodaj</Button>
+        <Button onClick={handleHide} >Zamknij</Button>
       </Modal.Footer>
     </form>
   </Modal>
 
-AddNewsModal = connectModal({ name: 'newsModal' })(AddNewsModal)
-AddNewsModal = reduxForm({ form: 'addNews' })(AddNewsModal)
-
-export default AddNewsModal
+export default connectModal({ name: 'newsModal' })(reduxForm({ form: 'addNews' })(AddNewsModal))

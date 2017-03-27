@@ -40,10 +40,11 @@ class UserProfile extends Component {
     }
 
     return (
-      <Grid className="content">
+      <Grid className="">
         <Row>
-          <h2>Ustawienia profilu</h2>
+          
           <Col sm={6}>
+          <h2>Ustawienia profilu</h2>
             <form id="frmProfile" role="form" onSubmit={this.onFormSubmit}>
               <p>{this.state.message}</p>
               <br />
@@ -75,7 +76,7 @@ class UserProfile extends Component {
               <button type="submit" className="btn btn-primary">Zapisz</button>
             </form>
           </Col>
-          <Col sm={6}>
+          <Col sm={6} style={{marginTop: 55}}>
             <ChangePassword />
           </Col>
         </Row>
@@ -86,6 +87,6 @@ class UserProfile extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchUser, updateUser }, dispatch)
-const mapStateToProps = (state) => ({ currentUser: state.currentUser })
+const mapStateToProps = (state) => ({ currentUser: state.user.payload })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

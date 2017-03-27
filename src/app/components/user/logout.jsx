@@ -1,12 +1,30 @@
-import React from 'react';
-import {Row, Col} from 'react-bootstrap'
+import React, {Component} from 'react';
+import {Grid, Row, Col} from 'react-bootstrap'
+import { logoutUser } from '../../modules/User'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-export default () => (
-    <Row className="content">
-        <Col sm={4} smOffset={4}>
-            <form id="frmLogout" role="form">
-                <h2>You are logged out!</h2>
-            </form>
-        </Col>
-    </Row>
-  );
+class logout extends Component {
+  componentWillMount() {
+    this.props.logoutUser()
+  }
+  render() {
+    return (
+      <Grid>
+        <h2>Jesteś wylogowany!</h2>
+      </Grid>
+    )
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        logoutUser
+    }, dispatch);
+}
+
+function mapStateToProps(state) {
+    return {};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(logout);
