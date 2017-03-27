@@ -38,7 +38,7 @@ class Header extends Component {
 								<Link to='/wolf-news' activeClassName='is-active'>Wolf news</Link>
 							</li>
 							<li>
-								<Link to="https://www.google.com/" target="_blank">Wolf shop</Link>
+								<a href="http://prodesktop3d.com/" target="_blank">Wolf shop</a>
 							</li>
 							<li>
 								<Link to='/o-nas' activeClassName='is-active'>O nas</Link>
@@ -47,7 +47,7 @@ class Header extends Component {
 								<Link to='/portfolio' activeClassName='is-active'>Portfolio</Link>
 							</li>
 							<li>
-								<Link to='/druk-3d' activeClassName='is-active'>Project studio</Link>
+								<Link to='/druk-3d' activeClassName='is-active'>Wolf 3d</Link>
 							</li>
 							<li>
 								<Link to='/projekty' activeClassName='is-active'>Projekty</Link>

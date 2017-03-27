@@ -93,18 +93,6 @@ const Partnerzy = ({
 					<Image src={image10}/>
 					<div className="hover" style={hexStyle}></div>
 				</div>
-			</div>
-			<div className="partners-hex partner11" onClick={() => insertHexToMainHex(image11)}>
-				<div className="rotation">
-					<Image src={image11}/>
-					<div className="hover" style={hexStyle}></div>
-				</div>
-			</div>
-			<div className="partners-hex partner12" onClick={() => insertHexToMainHex(image12)}>
-				<div className="rotation">
-					<Image src={image12}/>
-					<div className="hover" style={hexStyle}></div>
-				</div>
 			</div>			
 		</div>
 	</div>

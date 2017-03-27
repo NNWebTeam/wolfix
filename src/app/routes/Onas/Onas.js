@@ -21,7 +21,7 @@ class Onas extends Component {
 						<Link to='/o-nas-info' className="hex1">
 							<div className="info">
 								<Image src={onas}/>
-								O nas
+								Value
 							</div>
 							<Image className="hex-img" src={hexBlack}/>
 						</Link>

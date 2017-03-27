@@ -20,6 +20,13 @@ import WolfTeam from './WolfTeam'
 import Partnerzy from './Partnerzy'
 import Projekty from './Projekty'
 import Kontakt from './Kontakt'
+import Projektowanie from './Projektowanie'
+import Skanowanie3D from './Skanowanie3D'
+import Drukarki3D from './Drukarki3D'
+import WolfSilver from './WolfSilver'
+import Industry from './Industry'
+import Design from './Design'
+import Edu from './Edu'
 
 export default (
   <Route path="/" component={App}>
@@ -39,6 +46,13 @@ export default (
     <Route path="/partnerzy" component={Partnerzy} />
     <Route path="/projekty" component={Projekty} />
     <Route path="/kontakt" component={Kontakt} />
+    <Route path="/projektowanie" component={Projektowanie} />
+    <Route path="/skanowanie3d" component={Skanowanie3D} />
+    <Route path="/drukarki3D" component={Drukarki3D} />
+    <Route path="/wolfsilver" component={WolfSilver} />
+    <Route path="/industry" component={Industry} />
+    <Route path="/design" component={Design} />
+    <Route path="/edu" component={Edu} />
 
     <Route path='*' component={() => <div>Error 404</div>} />
   </Route>

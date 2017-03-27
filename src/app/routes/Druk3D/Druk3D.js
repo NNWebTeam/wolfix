@@ -10,49 +10,49 @@ class Druk3D extends Component {
 		return (
 			<div>
 				<div className="container">
-					<h2>Druk 3D</h2>
+					<h2>WOLF 3D</h2>
 				</div>
 				<div className="technics">
 					<div className="print">
 						<div className="tech">
-							<Link to="/projekty">
-								<div className="tech-name">Wolfix Filamenty</div>
-								<Image src={hexr}/>
-							</Link>
-						</div>
-						<div className="tech">
-							<Link to="/projekty">
+							<Link to="/projektowanie">
 								<div className="tech-name">Projektowanie</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/projekty">
-								<div className="tech-name">Opis technologii</div>
+							<Link to="/skanowanie3d">
+								<div className="tech-name">Skanowanie 3d</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/projekty">
-								<div className="tech-name">Opis technologii</div>
-								<Image src={hexr}/>
-							</Link>
-						</div>
-						<div className="tech">
-							<Link to="/projekty">
+							<Link to="/drukarki3d">
 								<div className="tech-name">Drukarki 3d</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/projekty">
+							<Link to="/wolfsilver">
+								<div className="tech-name">Wolf silver</div>
+								<Image src={hexr}/>
+							</Link>
+						</div>
+						<div className="tech">
+							<Link to="/industry">
 								<div className="tech-name">Industry</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
 						<div className="tech">
-							<Link to="/projekty">
-								<div className="tech-name">EDV</div>
+							<Link to="/design">
+								<div className="tech-name">Design</div>
+								<Image src={hexr}/>
+							</Link>
+						</div>
+						<div className="tech">
+							<Link to="/edu">
+								<div className="tech-name">EDU</div>
 								<Image src={hexr}/>
 							</Link>
 						</div>
