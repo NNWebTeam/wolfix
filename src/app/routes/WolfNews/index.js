@@ -8,11 +8,8 @@ const mapActionCreators = {
     addNews,
     setNews
 }
-const mapStateToProps = (state) => {
-    const {news}  = state;
-    return{
-        news
-    }
-}
+const mapStateToProps = ({news}) => ({
+    news
+})
 
 export default connect(mapStateToProps, mapActionCreators)(WolfNews)

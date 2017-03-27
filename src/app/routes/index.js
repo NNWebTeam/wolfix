@@ -27,6 +27,7 @@ import WolfSilver from './WolfSilver'
 import Industry from './Industry'
 import Design from './Design'
 import Edu from './Edu'
+import Filamenty from './Filamenty'
 
 export default (
   <Route path="/" component={App}>
@@ -53,6 +54,7 @@ export default (
     <Route path="/industry" component={Industry} />
     <Route path="/design" component={Design} />
     <Route path="/edu" component={Edu} />
+    <Route path="/filamenty" component={Filamenty} />
 
     <Route path='*' component={() => <div>Error 404</div>} />
   </Route>
