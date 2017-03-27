@@ -8,6 +8,7 @@ import createReducer from '../utils/createReducer'
 export const FETCH_NEWS = 'FETCH_NEWS'
 export const ADD_NEWS = 'ADD_NEWS'
 export const SET_NEWS = 'SET_NEWS'
+export const DELETE_NEWS = 'DELETE_NEWS'
 
 // ------------------------------------
 // Actions
@@ -23,10 +24,11 @@ export const addNews = news => ({
     payload: FireBaseTools.getDatabaseReference(`/news`).push().set(news)
 })
 
-export const setNews = news => ({
-    type: SET_NEWS,
-    news
+export const deleteNews = nid => ({
+    type: DELETE_NEWS,
+    payload: FireBaseTools.getDatabaseReference(`/news/${nid}`).set(null)
 })
+
 
 // ------------------------------------
 // Reducer
@@ -37,5 +39,5 @@ export const initialState = {
 }
 
 export default createReducer(initialState, {
-  [FETCH_NEWS]: (state, {news}) => ({news})
+  [FETCH_NEWS]: (state, {payload}) => ({news: payload})
 })

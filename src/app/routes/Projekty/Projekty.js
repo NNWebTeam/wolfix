@@ -15,10 +15,10 @@ const config = {
    injectionIdentifier: null,
    mirror: true,
    main: {
-      posY: "bot",
+      posY: "top",
       posX: "left",
       orientation: "vertical",
-      spacing: 10,
+      spacing: 30,
       size: 100,
       hlColor: "#ff8c00",
       hlSize: 16,

@@ -33,7 +33,7 @@ export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
     <Route path="/login" component={UserLogin} />
-    <Route path="/logout" component={UserLogin} onEnter={requireAuth} />
+    <Route path="/logout" component={UserLogout} />
     <Route path="/register" component={UserRegister} />
     <Route path="/reset" component={ResetPassword} />
     <Route path="/profile" component={UserProfile} onEnter={requireAuth} />
