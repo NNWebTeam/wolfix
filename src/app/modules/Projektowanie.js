@@ -1,6 +1,6 @@
 import createReducer from '../utils/createReducer'
 
-import image1 from '../assets/wolf3d/projektowanie/Projektowanie.png'
+import image1 from '../assets/photos/Projektowanie/1.png'
 
 // ------------------------------------
 // Constants

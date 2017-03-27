@@ -1,8 +1,8 @@
 import createReducer from '../utils/createReducer'
 
-import image1 from '../assets/photos/portfolio/bbb-400x453.png'
-import image2 from '../assets/photos/portfolio/aa-400x453.png'
-import image3 from '../assets/photos/portfolio/xxx-400x453.png'
+import image1 from '../assets/photos/portfolio/politechnika/1.png'
+import image2 from '../assets/photos/portfolio/politechnika/2.png'
+import image3 from '../assets/photos/portfolio/politechnika/3.png'
 
 // ------------------------------------
 // Constants
@@ -19,18 +19,18 @@ import image3 from '../assets/photos/portfolio/xxx-400x453.png'
 export const initialState = {
     portfolio: [
         {
-            name: 'Portfolio 1',
-            desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+            name: 'Fotel Bolidu',
+            desc: 'Wydrukowane na drukarkach WOLFino kopyto fotela bolidu posłużyło do stworzenia właściwego modelu z poliwęglanu. Druk 3D daje wyjątkowe możliwości tworzenia indywidualnych projektów. Wygodnej jazdy PRz Racing Team / Formuła Student Politechniki Rzeszowskiej!',
             img: image1
         },
         {
-            name: 'Portfolio 2',
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            name: 'Fotel Bolidu',
+            desc: "Wydrukowane na drukarkach WOLFino kopyto fotela bolidu posłużyło do stworzenia właściwego modelu z poliwęglanu. Druk 3D daje wyjątkowe możliwości tworzenia indywidualnych projektów. Wygodnej jazdy PRz Racing Team / Formuła Student Politechniki Rzeszowskiej!",
             img: image2
         },
         {
-            name: 'Portfolio 3',
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            name: 'Fotel Bolidu',
+            desc: "Wydrukowane na drukarkach WOLFino kopyto fotela bolidu posłużyło do stworzenia właściwego modelu z poliwęglanu. Druk 3D daje wyjątkowe możliwości tworzenia indywidualnych projektów. Wygodnej jazdy PRz Racing Team / Formuła Student Politechniki Rzeszowskiej!",
             img: image3
         }
     ]

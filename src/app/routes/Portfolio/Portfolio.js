@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 import Coverflow from 'react-coverflow'
+import './style.scss'
 
 class Portfolio extends Component {
 	constructor() {
