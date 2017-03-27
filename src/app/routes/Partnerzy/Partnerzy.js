@@ -3,18 +3,18 @@ import DocTitle from 'react-document-title'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
 import './Partnerzy.scss'
 
-import image1 from './../../assets/photos/filamentyPLA/filament (1).jpg'
-import image2 from './../../assets/photos/filamentyPLA/filament (2).jpg'
-import image3 from './../../assets/photos/filamentyPLA/filament (3).jpg'
-import image4 from './../../assets/photos/filamentyPLA/filament (4).jpg'
-import image5 from './../../assets/photos/filamentyPLA/filament (5).jpg'
-import image6 from './../../assets/photos/filamentyPLA/filament (6).jpg'
-import image7 from './../../assets/photos/filamentyPLA/filament (7).jpg'
-import image8 from './../../assets/photos/filamentyPLA/filament (8).jpg'
-import image9 from './../../assets/photos/filamentyPLA/filament (9).jpg'
-import image10 from './../../assets/photos/filamentyPLA/filament (10).jpg'
-import image11 from './../../assets/photos/filamentyPLA/filament (11).jpg'
-import image12 from './../../assets/photos/filamentyPLA/filament (12).jpg'
+import image1 from './../../assets/photos/partnerzy/3d phoenix.jpg'
+import image2 from './../../assets/photos/partnerzy/AKE.jpg'
+import image3 from './../../assets/photos/partnerzy/filaments4u.jpg'
+import image4 from './../../assets/photos/partnerzy/mtt polska.jpg'
+import image5 from './../../assets/photos/partnerzy/patech.jpg'
+import image6 from './../../assets/photos/partnerzy/plast-spaw.jpg'
+import image7 from './../../assets/photos/partnerzy/politechnika.jpg'
+// import image8 from './../../assets/photos/filamentyPLA/filament (8).jpg'
+// import image9 from './../../assets/photos/filamentyPLA/filament (9).jpg'
+// import image10 from './../../assets/photos/filamentyPLA/filament (10).jpg'
+// import image11 from './../../assets/photos/filamentyPLA/filament (11).jpg'
+// import image12 from './../../assets/photos/filamentyPLA/filament (12).jpg'
 import hexHover from './../../assets/hex.png'
 
 const Partnerzy = ({
@@ -30,7 +30,7 @@ const Partnerzy = ({
 	<div className="partnerzy">
 		<div className="main-hex">
 			<div className="hex" style={hexStyle}>
-				<Image src={text} responsive style={{marginTop: 20}}/>
+				<Image src={text} responsive style={{marginTop: 20, maxHeight: '80%', display: 'inline'}}/>
 			</div>
 		</div>
 		<div className="partners-hexes">
@@ -75,8 +75,20 @@ const Partnerzy = ({
 					<Image src={image7}/>
 					<div className="hover" style={hexStyle}></div>
 				</div>
-			</div>
-			<div className="partners-hex partner8" onClick={() => insertHexToMainHex(image8)}>
+			</div>			
+		</div>
+	</div>
+
+export default Partnerzy
+
+const hexStyle = {
+	backgroundImage: `url(${hexHover})`,
+	backgroundSize: '100%'
+}
+
+
+
+			{/*<div className="partners-hex partner8" onClick={() => insertHexToMainHex(image8)}>
 				<div className="rotation">
 					<Image src={image8}/>
 					<div className="hover" style={hexStyle}></div>
@@ -93,13 +105,4 @@ const Partnerzy = ({
 					<Image src={image10}/>
 					<div className="hover" style={hexStyle}></div>
 				</div>
-			</div>			
-		</div>
-	</div>
-
-export default Partnerzy
-
-const hexStyle = {
-	backgroundImage: `url(${hexHover})`,
-	backgroundSize: '100%'
-}
+			</div>*/}
