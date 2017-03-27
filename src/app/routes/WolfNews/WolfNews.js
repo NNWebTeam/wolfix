@@ -15,7 +15,9 @@ let postForm = {
 	index: 0
 }
 
-let postFile;
+let postFile = {
+	name: ''
+};
 
 function log(e) {
 	e.preventDefault();

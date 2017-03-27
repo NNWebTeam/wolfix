@@ -36,6 +36,7 @@ class Portfolio extends Component {
   }
   render () {
     const {projects} = this.props
+    const {active} = this.state
     return (
       <Grid className='projekty'>
         <Row>
@@ -43,12 +44,12 @@ class Portfolio extends Component {
             <Gallery
               className='gallery'
               config={config}
-              images={projects[this.state.active].imgs}
+              images={projects[active].imgs}
             />
           </Col>
           <Col sm={6}>
-            <h1><b>{projects[this.state.active].name}</b></h1>
-            <p>{projects[this.state.active].desc}</p>
+            <h1><b>{projects[active].name}</b></h1>
+            <p>{projects[active].desc}</p>
           </Col>
         </Row>
         <Coverflow
@@ -57,12 +58,13 @@ class Portfolio extends Component {
           displayQuantityOfSide={3}
           navigation={false}
           enableHeading={false}
-          active={this.state.active}
+          active={active}
         >
           <img src={projects[0].imgs[0]} onClick={() => {this.setState({active: 0})}}/>
           <img src={projects[1].imgs[0]} onClick={() => {this.setState({active: 1})}}/>
           <img src={projects[2].imgs[0]} onClick={() => {this.setState({active: 2})}}/>
           <img src={projects[3].imgs[0]} onClick={() => {this.setState({active: 3})}}/>
+          <img src={projects[4].imgs[0]} onClick={() => {this.setState({active: 4})}}/>
         </Coverflow>
         <div className="pomin">
           <a 

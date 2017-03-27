@@ -28,8 +28,17 @@ import image12 from '../assets/photos/filamentyPLA/filament (12).jpg'
 export const initialState = {
     projects: [
         {
-            name: 'Projekt 1',
-            desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+            name: 'WOLFix PLA Economic Line',
+            desc: `Soczyste i głębokie kolory z klasycznej palety barw.
+                Każdy z użytkowników drukarki znajdzie jakiś kolor dla potrzeb swojego wydruku spośród 14
+                odcieni: śnieżna biel, głęboki czarny, szary mysi, szary gołębi, transparentny, fiolet lawendowy, róż
+                fuksja, niebieski chabrowy, błękitna laguna, zielony kiwi, zielone jabłuszko, żółty cytrynowy,
+                pomarańczowy, czerwień makowa. Wszystkie materiały posiadają różne możliwości wyglądu
+                o powierzchni – matowej przy druku w temp. 185 C, aż do połyskliwej przy temperaturze druku
+                o 225 C. 1 kg filamentu nawiniętego na szpulę zapakowany jest hermetycznie z pochłaniaczem
+                wilgoci w kartonowe pudełko, dzięki czemu mamy gwarancję, że materiał dostarczony zostanie
+                nie uszkodzony i zabezpieczony przed działaniem czynników zewnętrznych typu wilgoć czy światło
+                słoneczne.`,
             imgs: [
                 image1,
                 image2,
@@ -37,8 +46,15 @@ export const initialState = {
             ]
         },
         {
-            name: 'Projekt 2',
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            name: 'WOLFix ABS Economic Line',
+            desc: `Każdy z użytkowników drukarki znajdzie jakiś kolor dla potrzeb swojego wydruku spośród 14
+                odcieni: śnieżna biel, głęboki czarny, szary mysi, szary gołębi, naturalny, fiolet lawendowy, róż
+                fuksja, niebieski chabrowy, błękitna laguna, ciemna zieleń, zielone jabłuszko, żółty cytrynowy,
+                pomarańczowy, czerwień makowa. Wszystkie materiały świetnie drukują się w przedziale temp.
+                o 225-265 C. 1 kg filamentu nawiniętego na szpulę jest zapakowany hermetycznie z pochłaniaczem
+                wilgoci w kartonowe pudełko, dzięki czemu mamy gwarancję, że materiał dostarczony zostanie
+                nie uszkodzony i zabezpieczony przed działaniem czynników zewnętrznych typu wilgoć czy światło
+                słoneczne. Tolerancja średnicy filamentu to (+/-0,25mm).`,
             imgs: [
                 image4,
                 image5,
@@ -46,8 +62,12 @@ export const initialState = {
             ]
         },
         {
-            name: 'Projekt 3',
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            name: 'WOLFix Crystal',
+            desc: `Transparentne materiały w szlachetnych odcieniach.
+                Nie ma osoby, która nie zachwyca się kamieniami szlachetnymi. Właśnie one były dla nas
+                inspiracją do stworzenia linii WOLFix Crystal – rubinowy, szmaragdowy, szafirowy, granat, onyx. W
+                połączeniu z transparentnością materiału i światłem tworzą niezwykłe zjawisko. Lampy, obudowy,
+                elementy ubrań, biżuteria... Świat jubilerstwa stoi przed Tobą otworem!`,
             imgs: [
                 image7,
                 image8,
@@ -55,8 +75,25 @@ export const initialState = {
             ]
         },
         {
-            name: 'Projekt 4',
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            name: 'WOLFix NeoFluo',
+            desc: `Neonowe filamenty posiadające cechy światłowodu.
+                Reklama, obudowy maszyn, elektroniki, a także elementy oświetlenia. To tylko część z rzeczy,
+                które można wydrukować z niepowtarzalnych neonowych kolorów, które posiadają cechy
+                transparentności. Wystarczy jedna mała dioda, aby Twój wydruk rozbłysnął promieniami żółtego,
+                pomarańczowego lub czerwonego neonu. Wypróbuj już dziś!`,
+            imgs: [
+                image10,
+                image11,
+                image12
+            ]
+        },
+        {
+            name: 'WOLFix Fashion&Design',
+            desc: `Filamenty stworzone specjalnie z myślą o wydrukach modowych, sztuki użytkowej,
+                architektonicznych, dekoracyjnych.
+                Drukujesz makietę lub modele? WOLFix Kość słoniowa to kolor dla Ciebie! A może marzy Ci się
+                strój w blasku srebrnych lub złotych refleksów? Jeśli tak, to nie zwlekaj. Linia Fashion&Design
+                powstała z myślą o Tobie!`,
             imgs: [
                 image10,
                 image11,
