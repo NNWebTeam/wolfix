@@ -66,15 +66,6 @@ class Filamenty extends Component {
           <img src={filamenty[3].imgs[0]} onClick={() => {this.setState({active: 3})}}/>
           <img src={filamenty[4].imgs[0]} onClick={() => {this.setState({active: 4})}}/>
         </Coverflow>
-        <div className="pomin">
-          <a 
-            className="link"
-            style={{background: `url(${buttonBack})`}}
-            onClick={() => {window.history.back()}}
-          >
-            Powrót
-          </a>
-        </div>
       </Grid>
     )
   }

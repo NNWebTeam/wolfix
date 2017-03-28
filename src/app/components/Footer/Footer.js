@@ -8,7 +8,7 @@ import buttonBack from './../../assets/button.png'
 const Footer = () =>
 <footer>
     
-    <div className="back" style={{width:"100vw", display:'flex', justifyContent:'center', bottom:'170px', marginTop:'-37px', marginBottom:'37px'}}>
+    <div className="back" style={{width:"100%", display:'flex', justifyContent:'center', bottom:'170px', marginTop:'-37px', marginBottom:'37px'}}>
         <a 
         className="link"
         style={{background: `url(${buttonBack})`}}
