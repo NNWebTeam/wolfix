@@ -28,8 +28,8 @@ header {
         }
         .navbar-header {
             height: 90px;
-            .navbar-brand {
-                height: 100%;
+            a > img {
+                height: 60px;
             }
         }
         .navbar-right {

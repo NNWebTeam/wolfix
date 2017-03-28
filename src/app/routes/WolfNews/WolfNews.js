@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import FireBaseTools from '../../utils/firebase'
 import './WolfNews.scss'
 import AddNewsModal from '../../components/modals/AddNewsModal'
+import loader from '../../assets/loader.gif'
 
 class WolfNews extends Component {
   componentWillMount() {
@@ -13,6 +14,10 @@ class WolfNews extends Component {
   }
   render() {
 	const {addNews, fetchNews, deleteNews, news, user} = this.props
+
+	const nids = []
+	news && Object.keys(news).map((nid, i) => nids.unshift(nid))
+	
 	return (
 	  <div className="wolf-news container">
 	  	{user &&
@@ -20,27 +25,33 @@ class WolfNews extends Component {
 		  <AddNewsModal onSubmit={addNews} onSubmitSuccess={fetchNews} />
 		  <h2>Wolf news</h2>
 		  <Row>
-			<div onClick={() => this.props.show('newsModal')} className="link pull-left">
-			  <Link>Dodaj news</Link>
-		   </div>
+			  <div onClick={() => this.props.show('newsModal')} className="link pull-left">
+			    <Link>Dodaj news</Link>
+		    </div>
 		  </Row>
 		</div>
 		}
 		
 		{news
-		? Object.keys(news).map((nid, i) =>
+		? nids.map((nid, i) =>
+			<div>
 		  <Row>
-			<Col sm={6} key={i}>
-			  
+			<Col sm={4} smPush={i%2 === 1 ? 4 : 0}>	
+			 <Image src={loader} />
+			</Col>
+			<Col sm={4} key={i} smPull={i%2 === 1 ? 4 : 0}>
 			  <h2>{news[nid].header}</h2>
 			  <p>{news[nid].body}</p>
-			  {user && 
-				<div className="link" style={{ margin: '0 auto' }}>
+			  
+			</Col>
+			
+		  </Row>
+			{user && 
+				<div className="link" style={{ margin: '0 auto', marginBottom: 20}}>
 				  <Link onClick={() => {deleteNews(nid); fetchNews();}}>Usuń</Link>
 				</div>
 			  }
-			</Col>
-		  </Row>
+				</div>
 		  )
 		: <Row>
 			<Col sm={6}>
@@ -49,7 +60,7 @@ class WolfNews extends Component {
 		  </Row>
 	}
 		
-		<div className="link" style={{ margin: '0 auto' }}>
+		<div className="link" style={{ margin: '0 auto', marginBottom: 100}}>
 		  <Link onClick={() => {}}>Wczytaj więcej</Link>
 		</div>
 	  </div>

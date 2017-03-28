@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import firebase from '../../utils/firebase';
+import {Link} from 'react-router'
 import {Grid, Row, Col, Image} from 'react-bootstrap'
-
-import { fetchUser, updateUser } from '../../modules/User'
+import { fetchUser, updateUser, logoutUser } from '../../modules/User'
 import Loading from '../helpers/loading'
 import ChangePassword from './change_password'
 import Dropzone from 'react-dropzone'
@@ -78,6 +78,7 @@ class UserProfile extends Component {
           </Col>
           <Col sm={6} style={{marginTop: 55}}>
             <ChangePassword />
+            <Link to='/logout'><button style={{marginTop: 20}}className="btn btn-primary">Wyloguj</button></Link>
           </Col>
         </Row>
       </Grid>

@@ -8,9 +8,9 @@ const mapActionCreators = ({
     logoutUser
 })
 const mapStateToProps = ({
-    currentUser
+    user: {payload}
 }) => ({
-    currentUser
+    user: payload
 })
 
 export default connect(mapStateToProps, mapActionCreators)(Header)

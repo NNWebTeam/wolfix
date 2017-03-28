@@ -5,28 +5,21 @@ import { Link } from 'react-router'
 import logo from './../../assets/logo.png'
 
 class Header extends Component {
-	constructor(props) {
-        super(props)
+	componentWillMount() {
         this.props.fetchUser()
-        this.logOut = this.logOut.bind(this)
     }
-
-    logOut() {
-        this.props.logoutUser().then((data) => {
-            this.props.fetchUser()
-        })
+	componentWillUpdate() {
+        this.props.fetchUser()
     }
-
 	render () {
-        const {currentUser} = this.props
+        const {user} = this.props
 		return (
 			<header>
-				
 				<Navbar>
 					<Navbar.Header>
 						<Navbar.Toggle />
 						<Navbar.Brand>
-							<Image src={logo}/>
+							<Link to={user ? '/profile' : '/'} ><Image src={logo}/></Link>
 						</Navbar.Brand>
 					</Navbar.Header>
 					<Navbar.Collapse>
@@ -58,21 +51,6 @@ class Header extends Component {
 							<li>
 								<Link to='/kontakt' activeClassName='is-active'>Kontakt</Link>
 							</li>
-						</Nav>
-						<Nav>
-							{currentUser && currentUser.uid &&
-                                <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        {currentUser.displayName}
-										<span className="caret" />
-									</a>
-                                    <ul className="dropdown-menu">
-                                        <li><Link to="/profile">Profil</Link></li>
-                                        <li><Link to="/logout" onClick={this.logOut}>Wyloguj</Link></li>
-                                    </ul>
-                                </li>
-                            }
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

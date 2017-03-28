@@ -32,7 +32,7 @@ import Filamenty from './Filamenty'
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
-    <Route path="/login" component={UserLogin} />
+    <Route path="/admin" component={UserLogin} />
     <Route path="/logout" component={UserLogout} />
     <Route path="/register" component={UserRegister} />
     <Route path="/reset" component={ResetPassword} />

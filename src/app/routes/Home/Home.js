@@ -35,9 +35,9 @@ class Home extends Component {
                 </div>
               </div>
               <div className="col-center">
-            <div className="homeHexes-logo wolf">
+            <Link to={'/admin'} className="homeHexes-logo wolf">
               <Image src={logo}/>
-            </div>
+            </Link>
                 <div className="hex-col">
                   <div className="hex">
                     <div className="hovers">
