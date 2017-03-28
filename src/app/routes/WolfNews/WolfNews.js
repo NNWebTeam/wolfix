@@ -8,6 +8,12 @@ import AddNewsModal from '../../components/modals/AddNewsModal'
 import loader from '../../assets/loader.gif'
 
 class WolfNews extends Component {
+	constructor() {
+		super()
+		this.state = {
+			more: false
+		}
+	}
   componentWillMount() {
 	this.props.fetchNews()
 	this.props.fetchUser()
@@ -60,9 +66,13 @@ class WolfNews extends Component {
 		  </Row>
 	}
 		
-		<div className="link" style={{ margin: '0 auto', marginBottom: 100}}>
-		  <Link onClick={() => {}}>Wczytaj więcej</Link>
+		<div className="link" style={{ margin: '0 auto', marginBottom: !this.state.more && 100}} >
+		  <Link onClick={() => {this.setState({more: true})}}>Wczytaj więcej</Link>
 		</div>
+		{this.state.more &&
+			<Row style={{ margin: '0 auto', marginBottom: 100}}>
+			INFORMACJE DOSTĘPNE WKRÓTCE!
+		</Row>}
 	  </div>
 	)
   }
