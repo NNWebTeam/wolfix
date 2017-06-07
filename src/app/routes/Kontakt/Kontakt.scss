@@ -1,11 +1,15 @@
 .kontakt {
     background-color: black;
-    height: 80vh;
+    margin-top: 0px;
+    padding-bottom: 143px;
+    color: white;
+    .row{
+        margin: 30px 0;
+    }
     form {
         margin-left: 10vw;
         margin-top: 10vw;
     }
-    color: white;
     .form-control {
         background-color:#1e1d1e;
         border: none;

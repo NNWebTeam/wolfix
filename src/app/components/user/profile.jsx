@@ -38,6 +38,9 @@ class UserProfile extends Component {
     if (!this.props.currentUser) {
       return <Loading />
     }
+    function handleSubmit(){
+      console.log(this.state.message);
+    }
 
     return (
       <Grid className="">
@@ -73,7 +76,7 @@ class UserProfile extends Component {
                   <Image src={this.state.photoURL.preview} responsive/>
                 </Dropzone>
               </div>
-              <button type="submit" className="btn btn-primary">Zapisz</button>
+              <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Zapisz</button>
             </form>
           </Col>
           <Col sm={6} style={{marginTop: 55}}>

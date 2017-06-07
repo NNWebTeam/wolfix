@@ -23,7 +23,7 @@ class Header extends Component {
 						</Navbar.Brand>
 					</Navbar.Header>
 					<Navbar.Collapse>
-						<Nav pullRight>
+						<Nav pullRight lg>
 							<li>
 								<Link className="link" to='/' className="link" activeClassName='is-active' onlyActiveOnIndex>Home</Link>
 							</li>
